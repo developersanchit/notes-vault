@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" class="__variable_f367f3 __variable_f2d25f">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Fundamentals of Electrical &amp; Electronics Engineering (EE10510) | SGSITS NotesVault</title>
+  <meta name="description" content="Study notes, slides, assignments and PYQs for Fundamentals of Electrical &amp; Electronics Engineering."/>
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="16x16"/>
+  <link rel="icon" href="../../live-icon.png"/>
+  <link rel="apple-touch-icon" href="../../live-icon.png"/>
+  <link rel="preconnect" href="https://drive.google.com"/>
+  <link rel="dns-prefetch" href="https://drive.google.com"/>
+  <link rel="stylesheet" href="../../_next/static/css/b16cc34f8d6a935b.css"/>
+  <script>
+    try {
+      var t = localStorage.getItem('notes-hub:theme');
+      if (t === 'dark') document.documentElement.dataset.theme = 'dark';
+      if (localStorage.getItem('notes-hub:reduced-motion') === '1') {
+        document.documentElement.classList.add('force-reduced-motion');
+      }
+    } catch (e) {}
+    window.NV_ROOT_PREFIX = "../../";
+  </script>
+  <style>
+    .nv-modal-backdrop { position: fixed; inset: 0; z-index: 90; background: color-mix(in srgb, var(--sage-800) 45%, transparent); backdrop-filter: blur(4px); display: none; align-items: flex-start; justify-content: center; padding: 10vh 1rem 1rem; }
+    .nv-modal-backdrop.open { display: flex; }
+    .nv-collapsed aside { transform: translateX(-100%); }
+    @media (min-width: 768px) { .nv-collapsed .nv-shell { padding-left: 0 !important; } }
+    .nv-drawer-open { pointer-events: auto !important; }
+    .nv-drawer-open > div:first-child { opacity: 1 !important; }
+    .nv-drawer-open > div:last-child { transform: translateX(0) !important; }
+    .nv-badge-drive { background: color-mix(in srgb, #16a34a 14%, transparent); color: #15803d; }
+    [data-theme="dark"] .nv-badge-drive { color: #4ade80; }
+  </style>
+</head>
+<body class="antialiased pb-16 md:pb-0">
+  <aside class="hidden md:flex fixed inset-y-0 left-0 z-40 w-sidebar flex-col bg-surface border-r border-border thin-scroll overflow-y-auto transition-transform duration-calm ease-calm translate-x-0"><a class="flex items-center gap-3 px-5 py-6 shrink-0" href="../../index.html"><img src="../../sgsits-logo.webp" alt="SGSITS crest" class="h-10 w-10 shrink-0 rounded-full object-cover shadow-sm"/><span class="leading-tight"><span class="block text-micro font-semibold uppercase tracking-[0.16em] text-text-faint">SGSITS</span><span class="block text-[16px] font-heading tracking-tight text-ink">NotesVault</span></span></a><nav class="flex-1 px-3"><p class="px-2.5 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.12em] text-text-faint">Menu</p><div class="space-y-0.5"><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard shrink-0" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg></span>Dashboard</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm bg-primary-soft font-semibold text-primary-strong" href="../../subjects/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm bg-surface text-sage-700 shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open shrink-0" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg></span>Subjects</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../notes/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span>Notes</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../bookmarks/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark shrink-0" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg></span>Saved</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../pyq/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text shrink-0" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg></span>PYQ Papers</a></div><div class="my-4 border-t border-border-soft"></div><p class="px-2.5 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.12em] text-text-faint">More</p><div class="space-y-0.5"><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../schedule/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days shrink-0" aria-hidden="true"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg></span>Schedule</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../about/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span>About</a></div></nav><div class="mx-3 mb-4 mt-2"><div class="relative overflow-hidden rounded-panel border border-border bg-primary-soft p-4"><span class="absolute -right-3 -top-3 flex h-14 w-14 items-center justify-center rounded-full bg-cream text-cream-ink opacity-70"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span><p class="relative text-body font-semibold text-ink mb-1">Contribute notes</p><p class="relative text-micro text-secondary mb-3 leading-relaxed max-w-[85%]">Share your notes and help fellow students.</p><a class="relative inline-flex items-center gap-1 rounded-button bg-surface px-3 py-1.5 text-micro font-semibold text-ink shadow-sm transition duration-calm ease-calm hover:text-primary" href="../../uploads/index.html">Upload notes <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></a></div><p class="mt-3 px-1 text-micro text-text-faint leading-relaxed">Unofficial student resource · not an official SGSITS portal</p></div></aside>
+  <div class="nv-shell flex flex-col min-h-screen transition-[padding] duration-calm ease-calm md:pl-sidebar">
+    <header class="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-border bg-[color-mix(in_srgb,var(--surface)_90%,transparent)] backdrop-blur-sm px-6 md:px-9"><button type="button" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-secondary transition duration-calm ease-calm hover:border-sage-300 hover:text-ink" id="nv-sidebar-toggle" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button><button type="button" class="flex w-full max-w-[380px] items-center gap-2.5 rounded-full border border-border bg-background px-4 py-2.5 text-body text-muted shadow-sm transition duration-calm ease-calm hover:border-sage-300 hover:shadow-md" id="nv-search-trigger" aria-label="Search notes (Ctrl+K)"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search shrink-0" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><span class="flex-1 text-left">Search notes…</span><kbd class="hidden rounded-tiny border border-border bg-surface px-1.5 py-0.5 text-micro sm:inline">⌘K</kbd></button><div class="ml-auto flex items-center gap-2"><button type="button" id="nv-theme-toggle" aria-label="Switch to dark theme" title="Dark theme" class="flex h-9 w-9 items-center justify-center rounded-button border border-border bg-surface text-secondary transition duration-calm ease-calm hover:border-sage-300 hover:text-ink"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg></button></div></header>
+    <main class="flex-1 px-5 py-7 md:px-12 md:py-11 max-w-shell w-full mx-auto">
+      
+    <div class="space-y-7">
+      <header class="space-y-3">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-meta text-muted">
+          <a href="../../subjects/index.html" class="hover:text-sage-700">Subjects</a>
+          <span>›</span>
+          <span class="text-ink font-medium">EE10510</span>
+        </nav>
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center rounded-full bg-primary-soft px-2.5 py-0.5 text-micro font-semibold text-primary-strong">EE10510</span>
+              <span class="text-micro text-muted">Semester 2 · L3·T0·P1 | 4 Credits</span>
+            </div>
+            <h1 class="mt-2 text-page font-heading tracking-[-0.01em] text-ink">Fundamentals of Electrical &amp; Electronics Engineering</h1>
+            <p class="mt-1 text-body text-secondary">51 study resources available</p>
+          </div>
+          <input id="nv-subj-detail-search" type="search" placeholder="Filter in EE10510…" class="h-10 rounded-input border border-border bg-surface px-3.5 text-body text-ink placeholder:text-muted focus:outline-none focus:border-sage-400"/>
+        </div>
+        <div id="nv-type-pills" class="flex flex-wrap gap-2 pt-1"><button type="button" data-type="all" class="nv-filter-pill active rounded-full border border-sage-300 bg-primary-soft px-3 py-1 text-micro font-semibold text-primary-strong">All (51)</button><button type="button" data-type="ASSIGNMENT" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Assignment (6)</button><button type="button" data-type="CHEAT_SHEET" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Cheat Sheet (2)</button><button type="button" data-type="NOTES" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Notes (38)</button><button type="button" data-type="PYQ" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">PYQ (3)</button><button type="button" data-type="SYLLABUS" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Syllabus (2)</button></div>
+      </header>
+      <div class="overflow-hidden rounded-md border border-border bg-surface shadow-sm">
+        <ul id="nv-subj-resource-list" class="divide-y divide-border-soft">
+          
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of electrical &amp; electronics engineering — previous year paper (ee10510 mst pyq 1) ee10510_mst_pyq_1.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdnaw000ly3kvu5vn6fpn/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Previous Year Paper (EE10510 MST PYQ 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_MST_PYQ_1.pdf · 35.1 MB · 1197 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="electronics/EE10510_MST_PYQ_1.pdf" href="https://drive.google.com/file/d/1gvbg6NBFiQ5OSePDj4CoM_Nwn9rbzjLf/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdnaw000ly3kvu5vn6fpn" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of electrical &amp; electronics engineering — previous year paper (ee10510 mst pyq) ee10510_mst_pyq.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdn7k000jy3kvzw46uglx/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Previous Year Paper (EE10510 MST PYQ)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_MST_PYQ.pdf · 35.1 MB · 1054 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="electronics/EE10510_MST_PYQ.pdf" href="https://drive.google.com/file/d/1pu_bzI1M9BF4W5ReyCo0StiYUUFmKt9d/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdn7k000jy3kvzw46uglx" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of electrical &amp; electronics engineering — previous year paper (ee10510 endsem 2022 paper1) ee10510_endsem_2022_paper1.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdn4a000hy3kvrmmsxew1/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Previous Year Paper (EE10510 EndSem 2022 Paper1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_EndSem_2022_Paper1.pdf · 17.0 MB · 607 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="electronics/EE10510_EndSem_2022_Paper1.pdf" href="https://drive.google.com/file/d/1qanIPO8tdd93IumCLhur1IOHFHaxgHYc/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdn4a000hy3kvrmmsxew1" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (ee10510 practice sheet 2) ee10510_practice_sheet_2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdnky000ry3kvzfaub6d1/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (EE10510 Practice Sheet 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_Practice_Sheet_2.pdf · 360.4 KB · 602 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/EE10510_Practice_Sheet_2.pdf" href="https://drive.google.com/file/d/1gYuRDN9TaE6o6AdPu8Nos8k7Lg3ajHb4/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdnky000ry3kvzfaub6d1" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (ee10510 practice sheet 1) ee10510_practice_sheet_1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdnhl000py3kv26p4vvkl/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (EE10510 Practice Sheet 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_Practice_Sheet_1.pdf · 465.7 KB · 581 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/EE10510_Practice_Sheet_1.pdf" href="https://drive.google.com/file/d/1vxhq5NpbdcouSvRHC9_Oj0coHE12xv6m/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdnhl000py3kv26p4vvkl" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (ee10510 practice set 1) ee10510_practice_set_1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdned000ny3kvsla99yia/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (EE10510 Practice Set 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_Practice_Set_1.pdf · 87.9 KB · 564 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/EE10510_Practice_Set_1.pdf" href="https://drive.google.com/file/d/1eoxAsLC5n61YJlqR2mDP9PB2A8hfVqta/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdned000ny3kvsla99yia" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="ee10510 electrical technology unit 1 ee10510_electrical_technology_unit_1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdn0z000fy3kv7awrlxuc/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">EE10510 Electrical Technology Unit 1</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_Electrical_Technology_Unit_1.pdf · 12.9 MB · 519 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/EE10510_Electrical_Technology_Unit_1.pdf" href="https://drive.google.com/file/d/1EGinjfAP8ESEepJO_iEJGGM_m26UCgOm/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdn0z000fy3kv7awrlxuc" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical unit 2 electrical unit 2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjrig000j15hts98veyek/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical Unit 2</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Electrical unit 2.pdf · 23.4 MB · 495 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/Electrical unit 2.pdf" href="https://drive.google.com/file/d/1lBXNDs6DgbGDzQw5bNfXyMvS5Rk9fdNj/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjrig000j15hts98veyek" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (ee10510 block diagram communication) ee10510_block_diagram_communication.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdmxk000dy3kvva6k6ua7/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (EE10510 Block Diagram Communication)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_Block_Diagram_Communication.pdf · 406.0 KB · 492 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/EE10510_Block_Diagram_Communication.pdf" href="https://drive.google.com/file/d/1q9mO_cEx_8nz29-qzvsHoK0aSY0V7hBr/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdmxk000dy3kvva6k6ua7" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical technology — unit 2 notes (part 1) et-unit2-part1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy6f500d39duihqin80zm/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical Technology — Unit 2 Notes (Part 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">et-unit2-part1.pdf · 9.5 MB · 481 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/et-unit2-part1.pdf" href="https://drive.google.com/file/d/1zHryo_i0pa1pA9uatuhgiDVgFGaT2QK-/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy6f500d39duihqin80zm" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="dc motor — unit 4 notes unit4-dc-motor.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oya7n00dt9dui3dhdrlxg/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">DC Motor — Unit 4 Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">unit4-dc-motor.pdf · 1.3 MB · 477 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/unit4-dc-motor.pdf" href="https://drive.google.com/file/d/1fTmN30nIJDaU0_q1V1vc0nyFgzc6Jv3A/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oya7n00dt9dui3dhdrlxg" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="ac three-phase circuits — practice sheet practice-sheet-2-ac-3-phase.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy97200dl9duiufl890ah/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">AC Three-Phase Circuits — Practice Sheet</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">practice-sheet-2-ac-3-phase.pdf · 379.7 KB · 466 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/practice-sheet-2-ac-3-phase.pdf" href="https://drive.google.com/file/d/169SFqQ03McwwCi8t1jcoCaXhBTuuvIrj/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy97200dl9duiufl890ah" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical technology — unit 2 notes (part 2) et-unit2-part2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy6qh00d59duiva1qautu/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical Technology — Unit 2 Notes (Part 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">et-unit2-part2.pdf · 2.6 MB · 432 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/et-unit2-part2.pdf" href="https://drive.google.com/file/d/1_fwc8NTuqqUfPEb-3X4d7eUKRgihS8jb/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy6qh00d59duiva1qautu" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="CHEAT_SHEET" data-search="digital electronics — cheat sheet eee-digital-cheatsheet.pdf cheat sheet">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy5sc00cz9duitqwrilxi/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Digital Electronics — Cheat Sheet</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">eee-digital-cheatsheet.pdf · 6.2 MB · 430 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Cheat Sheet</span>
+            <a data-asset-href="electronics/eee-digital-cheatsheet.pdf" href="https://drive.google.com/file/d/1EW1PPNTtjU0Siz50T3-PuzYoehTOMoI4/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy5sc00cz9duitqwrilxi" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (unit 2 feee) unit 2 feee.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjsqm001315htndd8hrli/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (UNIT 2 FEEE)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">UNIT 2 FEEE.pdf · 2.1 MB · 430 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/UNIT 2 FEEE.pdf" href="https://drive.google.com/file/d/1bjkEGAZQfdZL-6VXKWEHpZP6ru8p6w2y/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjsqm001315htndd8hrli" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="CHEAT_SHEET" data-search="analog electronics — cheat sheet eee-analog-cheatsheet.pdf cheat sheet">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy5f500cv9dui2ofz1ai6/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Analog Electronics — Cheat Sheet</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">eee-analog-cheatsheet.pdf · 4.1 MB · 403 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Cheat Sheet</span>
+            <a data-asset-href="electronics/eee-analog-cheatsheet.pdf" href="https://drive.google.com/file/d/1WwUIohSjY6E6pXh6mxx06bAGyNjwaa1a/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy5f500cv9dui2ofz1ai6" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical &amp; electronics engineering — lecture 8 lecture-8-dr-sks.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy8h100df9duifr2ngcx0/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical &amp; Electronics Engineering — Lecture 8</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lecture-8-dr-sks.pdf · 912.7 KB · 394 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/lecture-8-dr-sks.pdf" href="https://drive.google.com/file/d/1dV6sX6kyWVybc6pf3GkRuQllBq4Y3t4C/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy8h100df9duifr2ngcx0" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (ee10510 l 3 unit 2 drsks) ee10510_l-3_unit 2_drsks.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjrfa000h15htngkijldb/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (EE10510 L 3 Unit 2 DrSKS)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_L-3_Unit 2_DrSKS.pdf · 614.2 KB · 390 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/EE10510_L-3_Unit 2_DrSKS.pdf" href="https://drive.google.com/file/d/1sAa2fShS7V52jyyv5FrRb_bnEZlmpHCO/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjrfa000h15htngkijldb" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical &amp; electronics engineering — practice sheet 2 practice-sheet-2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy9i100dn9duip2m2jvkg/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical &amp; Electronics Engineering — Practice Sheet 2</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">practice-sheet-2.pdf · 360.4 KB · 378 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/practice-sheet-2.pdf" href="https://drive.google.com/file/d/16oczmseQazAL6BHOEUOw0O5x9_OZvWuW/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy9i100dn9duip2m2jvkg" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="fundamentals of electrical &amp; electronics engineering — assignment (ee10510 assignment 2) ee10510_assignment_2.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdmub000by3kvvqlff468/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Assignment (EE10510 Assignment 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_Assignment_2.pdf · 8.4 MB · 376 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="electronics/EE10510_Assignment_2.pdf" href="https://drive.google.com/file/d/1fjr-XrQ9CslWA6pJbbLO1A4b7rH4ismo/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdmub000by3kvvqlff468" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical technology — unit 3 notes (part 2) et-unit3-part2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy7d900d99duiiri2zyl1/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical Technology — Unit 3 Notes (Part 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">et-unit3-part2.pdf · 5.6 MB · 368 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/et-unit3-part2.pdf" href="https://drive.google.com/file/d/18wgCCvjtr1zldenRFapAQDUv_z7hDDrc/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy7d900d99duiiri2zyl1" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical &amp; electronics engineering — lecture 6 lecture-6.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy7nf00db9duialedcnug/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical &amp; Electronics Engineering — Lecture 6</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lecture-6.pdf · 831.6 KB · 362 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/lecture-6.pdf" href="https://drive.google.com/file/d/1Fm9MSHMHyTbzyd7vEDAizZ073CQp3k8k/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy7nf00db9duialedcnug" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="fundamentals of electrical &amp; electronics engineering — assignment (ee10510 assignment) ee10510_assignment.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdmqv0009y3kvoyeje4w4/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Assignment (EE10510 Assignment)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_Assignment.pdf · 74.0 KB · 345 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="electronics/EE10510_Assignment.pdf" href="https://drive.google.com/file/d/16Fv6CAbdQqUGFE4wOxk3SbQ2xPGFBHNS/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdmqv0009y3kvoyeje4w4" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical &amp; electronics engineering — lecture 9 lecture-9-dr-sks.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy8ri00dh9dui7e94ys46/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical &amp; Electronics Engineering — Lecture 9</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lecture-9-dr-sks.pdf · 1.4 MB · 343 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/lecture-9-dr-sks.pdf" href="https://drive.google.com/file/d/1Aj0nIcV21cui3rmpXqydYFdzG3xIlB5c/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy8ri00dh9dui7e94ys46" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (karnaugh maps 2) _karnaugh_maps_2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjthw001d15htwc5yotrq/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (Karnaugh Maps 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">_karnaugh_maps_2.pdf · 965.4 KB · 327 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/_karnaugh_maps_2.pdf" href="https://drive.google.com/file/d/1hCczSM-9g6nnqMt3Ncs16PnNQ_P6FA2F/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjthw001d15htwc5yotrq" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (karnaugh maps 1) _karnaugh_maps_1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjtdd001b15ht36gw3d0a/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (Karnaugh Maps 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">_karnaugh_maps_1.pdf · 200.8 KB · 325 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/_karnaugh_maps_1.pdf" href="https://drive.google.com/file/d/1FulVqeSJqawsNqUnWCcN-qRNyWL2EUQ_/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjtdd001b15ht36gw3d0a" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (unit 5 feee) unit 5 feee.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjt5c001715htefucng53/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (UNIT 5 FEEE)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">UNIT 5 FEEE.pdf · 816.5 KB · 319 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/UNIT 5 FEEE.pdf" href="https://drive.google.com/file/d/1cLfyL-kuX_Z19j-mH7BkHUWCkbYP8lNE/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjt5c001715htefucng53" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (unit iii magnetic ckt l1+l2 pdf) unit-iii magnetic ckt l1+l2 pdf.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjt94001915htyau6y3ls/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (Unit III Magnetic Ckt L1+L2 Pdf)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Unit-III Magnetic Ckt L1+L2 pdf.pdf · 2.1 MB · 316 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/Unit-III Magnetic Ckt L1+L2 pdf.pdf" href="https://drive.google.com/file/d/1e_V5Zj0xn-NJjlV8l1wgQ9274QNa7wKO/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjt94001915htyau6y3ls" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (unit 4 feee) unit 4 feee.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjsty001515ht8qhwf174/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (UNIT 4 FEEE)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">UNIT 4 FEEE.pdf · 400.5 KB · 308 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/UNIT 4 FEEE.pdf" href="https://drive.google.com/file/d/1lM_U3KwqDF04YocdGMTU3Tj3o7-YwLFG/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjsty001515ht8qhwf174" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (unit 1 feee) unit 1 feee.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjsmd001115htetm10pi0/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (UNIT 1 FEEE)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">UNIT 1 FEEE.pdf · 892.1 KB · 307 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/UNIT 1 FEEE.pdf" href="https://drive.google.com/file/d/1XMKCOudnuXUiuw-Fshz8-M5SyCtSFV7Y/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjsmd001115htetm10pi0" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (tutorial problems unit 1 dc circuits ee10510) tutorial problems_unit-1_dc circuits_ee10510.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjs6u000x15htxudodh69/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (Tutorial Problems Unit 1 DC Circuits EE10510)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Tutorial problems_Unit-1_DC Circuits_EE10510.pdf · 1.5 MB · 304 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/Tutorial problems_Unit-1_DC Circuits_EE10510.pdf" href="https://drive.google.com/file/d/1IZq2Rf5DmQ-QmRanCBF_WktpUMT0pzNp/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjs6u000x15htxudodh69" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (unit 1 voltage &amp; curent) unit 1 - voltage &amp; curent .pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjsie000z15htzrt790g3/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (Unit 1 Voltage &amp; Curent)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Unit 1 - Voltage &amp; Curent .pdf · 13.4 MB · 304 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/Unit 1 - Voltage &amp; Curent .pdf" href="https://drive.google.com/file/d/1aRXLCne77NxjlllHV-z24Qyf4LpDHRT7/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjsie000z15htzrt790g3" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (l 9 drsks) l-9_drsks.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjrz6000t15htx575qzlv/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (L 9 DrSKS)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">L-9_DrSKS.pdf · 1.4 MB · 303 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/L-9_DrSKS.pdf" href="https://drive.google.com/file/d/1KtLEWtshAK9Rvnr6f1wcoh8YakY1KjEz/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjrz6000t15htx575qzlv" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (quiz 2 electricity) quiz-2 electricity.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjs33000v15htx6wtw1s6/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (QUIZ 2 ELECTRICITY)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">QUIZ-2 ELECTRICITY.pdf · 1006.7 KB · 302 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/QUIZ-2 ELECTRICITY.pdf" href="https://drive.google.com/file/d/1GK52fiNISautt-_eYjaJ3OU6cYjrz3bs/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjs33000v15htx6wtw1s6" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (l 8 dr. sks) l-8_dr. sks.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjrw1000r15htsyg74awg/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (L 8 Dr. SKS)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">L-8_Dr. SKS.pdf · 912.7 KB · 295 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/L-8_Dr. SKS.pdf" href="https://drive.google.com/file/d/1oiJeAcD_ZMbiNgirTUlwg4EgTuzB1GYj/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjrw1000r15htsyg74awg" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="ee10510 assignment ac circuits 3 phase systems ee10510-assignment-ac-circuits-3-phase-systems.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy47g00cn9dui0mo2vo4d/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Ee10510 Assignment AC Circuits 3 Phase Systems</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ee10510-assignment-ac-circuits-3-phase-systems.pdf · 276.0 KB · 294 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="electronics/ee10510-assignment-ac-circuits-3-phase-systems.pdf" href="https://drive.google.com/file/d/1LtTqSyC5k9cuEfh39MN0N0LjJspQBN6O/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy47g00cn9dui0mo2vo4d" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (l 10 drsks) l-10_drsks.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjrp6000n15htrllsvvyz/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (L 10 DrSKS)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">L-10_DrSKS.pdf · 3.1 MB · 290 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/L-10_DrSKS.pdf" href="https://drive.google.com/file/d/1QwPZkE3urQ8X4esB46MGodEZ3IsINLGb/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjrp6000n15htrllsvvyz" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (ee10510 l 1 dr.sks) ee10510_l-1_dr.sks.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjrc6000f15htp7ky7lcs/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (EE10510 L 1 Dr.SKS)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">EE10510_L-1_Dr.SKS.pdf · 896.0 KB · 288 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/EE10510_L-1_Dr.SKS.pdf" href="https://drive.google.com/file/d/1NzSI8N7PDZjyP2Jw7dT2t0Q15TKDAuk0/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjrc6000f15htp7ky7lcs" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (l 7 drsks ee10510) l-7_drsks_ee10510.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjrsi000p15ht3m5ohq6t/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (L 7 DrSKS EE10510)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">L-7_DrSKS_EE10510.pdf · 676.8 KB · 288 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/L-7_DrSKS_EE10510.pdf" href="https://drive.google.com/file/d/1_A5Wn8j6-QlTIvm0MQ93GtbTLaa0Av4e/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjrsi000p15ht3m5ohq6t" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of electrical &amp; electronics engineering — notes (half adder and full adder) half adder and full adder.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjrlq000l15htnkgg60wj/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Notes (Half Adder And Full Adder)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Half Adder and Full Adder.pdf · 664.0 KB · 285 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/Half Adder and Full Adder.pdf" href="https://drive.google.com/file/d/1YSlemLTS0q2yV6iinpIg_5FPG7VZJVQB/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjrlq000l15htnkgg60wj" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical technology — unit 1 notes et-unit1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy63q00d19duizkguvmvs/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical Technology — Unit 1 Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">et-unit1.pdf · 12.9 MB · 280 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/et-unit1.pdf" href="https://drive.google.com/file/d/1hObdbqSJjY9yaIf9iYis3SOV3pzFCbvf/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy63q00d19duizkguvmvs" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="transformers — notes transformer.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy9z400dr9duinfsrox33/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Transformers — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">transformer.pdf · 14.5 MB · 265 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/transformer.pdf" href="https://drive.google.com/file/d/1G9M3_BiqWguOdg9PmUyui09D-hOX2q-7/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy9z400dr9duinfsrox33" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical technology — unit 3 notes (part 1) et-unit3-part1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy71u00d79duilmxkxvj8/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical Technology — Unit 3 Notes (Part 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">et-unit3-part1.pdf · 1.5 MB · 264 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/et-unit3-part1.pdf" href="https://drive.google.com/file/d/1LJXIhceoOnRWj-ZzLH5Gdden4Jkj3oLC/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy71u00d79duilmxkxvj8" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="electrical &amp; electronics engineering — assignment assignment-electrical.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy2mj00cf9dui58ah3iy6/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical &amp; Electronics Engineering — Assignment</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">assignment-electrical.pdf · 16.4 MB · 262 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="electronics/assignment-electrical.pdf" href="https://drive.google.com/file/d/14YnwnSZtvWVokZEaVkdJlXryZYPWLNZ_/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy2mj00cf9dui58ah3iy6" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical &amp; electronics engineering — lecture 7 lecture-7-dr-sks-ee10510.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy7ui00dd9duic0b2acn7/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical &amp; Electronics Engineering — Lecture 7</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lecture-7-dr-sks-ee10510.pdf · 676.8 KB · 259 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/lecture-7-dr-sks-ee10510.pdf" href="https://drive.google.com/file/d/17DxXBdEKtve34bJzyrDEGOenMCVhY1NX/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy7ui00dd9duic0b2acn7" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electronics — unit 1 notes ec-unit-1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy2xx00ch9duiwynr5ux6/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electronics — Unit 1 Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ec-unit-1.pdf · 2.1 MB · 257 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/ec-unit-1.pdf" href="https://drive.google.com/file/d/1YAEoNUhS0aXQqtzV1o2wuwyCWoaep09H/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy2xx00ch9duiwynr5ux6" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="SYLLABUS" data-search="ee10510 syllabus ee10510-syllabus.pdf syllabus">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy4zu00cr9dui5g0d2t4u/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Ee10510 Syllabus</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ee10510-syllabus.pdf · 344.3 KB · 254 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Syllabus</span>
+            <a data-asset-href="electronics/ee10510-syllabus.pdf" href="https://drive.google.com/file/d/1zN9bsGJWplQiXAUpC7myatOn42Tq3sRm/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy4zu00cr9dui5g0d2t4u" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="electrical &amp; electronics engineering — complete notes ee-notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy3ni00cl9duiwsudp2v9/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Electrical &amp; Electronics Engineering — Complete Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ee-notes.pdf · 13.1 MB · 250 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="electronics/ee-notes.pdf" href="https://drive.google.com/file/d/1Jo3au1-ibEdPnYPRrioes_yzTN-wtnJb/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy3ni00cl9duiwsudp2v9" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="ee10510 assignment dc circuit analysis ee10510-assignment-dc-circuit-analysis.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy4iu00cp9dui54lhz2k0/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Ee10510 Assignment DC Circuit Analysis</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ee10510-assignment-dc-circuit-analysis.pdf · 196.8 KB · 227 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="electronics/ee10510-assignment-dc-circuit-analysis.pdf" href="https://drive.google.com/file/d/1IbOiudi60DbszvJKzFsuevHEhRNrzq-l/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy4iu00cp9dui54lhz2k0" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="fundamentals of electrical &amp; electronics engineering — assignment (assignment based on unit i dc circuits new) assignment based on unit-i dc circuits_new.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjr7n000d15hta2ut0y1b/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of Electrical &amp; Electronics Engineering — Assignment (Assignment Based On Unit I DC Circuits New)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Assignment based on Unit-I DC Circuits_new.pdf · 196.8 KB · 200 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="electronics/Assignment based on Unit-I DC Circuits_new.pdf" href="https://drive.google.com/file/d/17JTcBbEfG1nd8EgfD4xzPGYWGf0pi3AS/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjr7n000d15hta2ut0y1b" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="SYLLABUS" data-search="ece syllabus ece-syllabus.jpg syllabus">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oy3c500cj9duizurq9mrl/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">JPG</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Ece Syllabus</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ece-syllabus.jpg · 108.5 KB · 184 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Syllabus</span>
+            <a data-asset-href="electronics/ece-syllabus.jpg" href="https://drive.google.com/file/d/126QEIwBLS_9qPIM6eTKxU2Lv_PWN9CRJ/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oy3c500cj9duizurq9mrl" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+    
+    </main>
+  </div>
+  <nav aria-label="Bottom navigation" class="fixed bottom-0 left-0 right-0 z-40 flex h-bottomnav items-center justify-around border-t border-border bg-surface md:hidden"><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-sage-700 font-semibold" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Home</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../subjects/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Subjects</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../notes/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Notes</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../bookmarks/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg>Saved</a><button type="button" id="nv-mobile-more" aria-label="More" aria-expanded="false" class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>More</button></nav>
+  <div id="nv-mobile-drawer" class="fixed inset-0 z-[80] md:hidden pointer-events-none" aria-hidden="true"><div class="absolute inset-0 bg-[color-mix(in_srgb,var(--sage-800)_45%,transparent)] backdrop-blur-sm transition-opacity duration-300 opacity-0"></div><div role="dialog" aria-label="Navigation menu" class="absolute inset-y-0 left-0 flex w-[82%] max-w-[300px] flex-col bg-surface shadow-lg transition-transform duration-300 ease-out -translate-x-full"><div class="flex items-center justify-between px-5 py-5"><a class="flex items-center gap-3" href="../../index.html"><img src="../../sgsits-logo.webp" alt="SGSITS crest" class="h-9 w-9 shrink-0 rounded-full object-cover shadow-sm"/><span class="leading-tight"><span class="block text-micro font-semibold uppercase tracking-[0.16em] text-text-faint">SGSITS</span><span class="block text-[15px] font-heading text-ink">NotesVault</span></span></a><button id="nv-drawer-close" aria-label="Close menu" class="flex h-8 w-8 items-center justify-center rounded-button text-secondary hover:bg-surface-soft hover:text-ink"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><nav class="flex-1 overflow-y-auto px-3 pb-4"><div class="space-y-0.5"><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm bg-primary-soft font-semibold text-primary-strong" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard shrink-0" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>Dashboard</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../subjects/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open shrink-0" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Subjects</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../notes/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Notes</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../bookmarks/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark shrink-0" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg>Saved</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../pyq/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text shrink-0" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg>PYQ Papers</a></div><div class="my-3 border-t border-border-soft"></div><div class="space-y-0.5"><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../schedule/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days shrink-0" aria-hidden="true"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg>Schedule</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../about/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>About</a></div></nav></div></div>
+  <!-- Global Ctrl+K Search Modal -->
+  <div id="nv-search-modal" class="nv-modal-backdrop" role="dialog" aria-modal="true" aria-label="Search notes and subjects">
+    <div class="w-full max-w-xl overflow-hidden rounded-panel border border-border bg-surface shadow-lg">
+      <div class="flex items-center gap-2.5 border-b border-border px-4 py-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-muted"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+        <input id="nv-search-input" type="text" placeholder="Search notes, PYQs, slides, or subjects…" class="w-full bg-transparent text-body-lg text-ink placeholder:text-muted focus:outline-none"/>
+        <button id="nv-search-close" type="button" class="rounded-tiny border border-border px-2 py-0.5 text-micro text-muted hover:text-ink">Esc</button>
+      </div>
+      <div id="nv-search-results" class="max-h-[60vh] overflow-y-auto divide-y divide-border-soft p-2"></div>
+    </div>
+  </div>
+  <script src="../../assets-config.js"></script>
+  <script src="../../data/site-data.js"></script>
+  <script src="../../static-app.js"></script>
+  
+</body>
+</html>

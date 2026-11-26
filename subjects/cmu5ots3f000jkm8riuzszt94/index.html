@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" class="__variable_f367f3 __variable_f2d25f">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mathematics for Engineers (MA10021) | SGSITS NotesVault</title>
+  <meta name="description" content="Study notes, slides, assignments and PYQs for Mathematics for Engineers."/>
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="16x16"/>
+  <link rel="icon" href="../../live-icon.png"/>
+  <link rel="apple-touch-icon" href="../../live-icon.png"/>
+  <link rel="preconnect" href="https://drive.google.com"/>
+  <link rel="dns-prefetch" href="https://drive.google.com"/>
+  <link rel="stylesheet" href="../../_next/static/css/b16cc34f8d6a935b.css"/>
+  <script>
+    try {
+      var t = localStorage.getItem('notes-hub:theme');
+      if (t === 'dark') document.documentElement.dataset.theme = 'dark';
+      if (localStorage.getItem('notes-hub:reduced-motion') === '1') {
+        document.documentElement.classList.add('force-reduced-motion');
+      }
+    } catch (e) {}
+    window.NV_ROOT_PREFIX = "../../";
+  </script>
+  <style>
+    .nv-modal-backdrop { position: fixed; inset: 0; z-index: 90; background: color-mix(in srgb, var(--sage-800) 45%, transparent); backdrop-filter: blur(4px); display: none; align-items: flex-start; justify-content: center; padding: 10vh 1rem 1rem; }
+    .nv-modal-backdrop.open { display: flex; }
+    .nv-collapsed aside { transform: translateX(-100%); }
+    @media (min-width: 768px) { .nv-collapsed .nv-shell { padding-left: 0 !important; } }
+    .nv-drawer-open { pointer-events: auto !important; }
+    .nv-drawer-open > div:first-child { opacity: 1 !important; }
+    .nv-drawer-open > div:last-child { transform: translateX(0) !important; }
+    .nv-badge-drive { background: color-mix(in srgb, #16a34a 14%, transparent); color: #15803d; }
+    [data-theme="dark"] .nv-badge-drive { color: #4ade80; }
+  </style>
+</head>
+<body class="antialiased pb-16 md:pb-0">
+  <aside class="hidden md:flex fixed inset-y-0 left-0 z-40 w-sidebar flex-col bg-surface border-r border-border thin-scroll overflow-y-auto transition-transform duration-calm ease-calm translate-x-0"><a class="flex items-center gap-3 px-5 py-6 shrink-0" href="../../index.html"><img src="../../sgsits-logo.webp" alt="SGSITS crest" class="h-10 w-10 shrink-0 rounded-full object-cover shadow-sm"/><span class="leading-tight"><span class="block text-micro font-semibold uppercase tracking-[0.16em] text-text-faint">SGSITS</span><span class="block text-[16px] font-heading tracking-tight text-ink">NotesVault</span></span></a><nav class="flex-1 px-3"><p class="px-2.5 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.12em] text-text-faint">Menu</p><div class="space-y-0.5"><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard shrink-0" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg></span>Dashboard</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm bg-primary-soft font-semibold text-primary-strong" href="../../subjects/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm bg-surface text-sage-700 shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open shrink-0" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg></span>Subjects</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../notes/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span>Notes</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../bookmarks/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark shrink-0" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg></span>Saved</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../pyq/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text shrink-0" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg></span>PYQ Papers</a></div><div class="my-4 border-t border-border-soft"></div><p class="px-2.5 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.12em] text-text-faint">More</p><div class="space-y-0.5"><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../schedule/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days shrink-0" aria-hidden="true"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg></span>Schedule</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../about/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span>About</a></div></nav><div class="mx-3 mb-4 mt-2"><div class="relative overflow-hidden rounded-panel border border-border bg-primary-soft p-4"><span class="absolute -right-3 -top-3 flex h-14 w-14 items-center justify-center rounded-full bg-cream text-cream-ink opacity-70"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span><p class="relative text-body font-semibold text-ink mb-1">Contribute notes</p><p class="relative text-micro text-secondary mb-3 leading-relaxed max-w-[85%]">Share your notes and help fellow students.</p><a class="relative inline-flex items-center gap-1 rounded-button bg-surface px-3 py-1.5 text-micro font-semibold text-ink shadow-sm transition duration-calm ease-calm hover:text-primary" href="../../uploads/index.html">Upload notes <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></a></div><p class="mt-3 px-1 text-micro text-text-faint leading-relaxed">Unofficial student resource · not an official SGSITS portal</p></div></aside>
+  <div class="nv-shell flex flex-col min-h-screen transition-[padding] duration-calm ease-calm md:pl-sidebar">
+    <header class="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-border bg-[color-mix(in_srgb,var(--surface)_90%,transparent)] backdrop-blur-sm px-6 md:px-9"><button type="button" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-secondary transition duration-calm ease-calm hover:border-sage-300 hover:text-ink" id="nv-sidebar-toggle" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button><button type="button" class="flex w-full max-w-[380px] items-center gap-2.5 rounded-full border border-border bg-background px-4 py-2.5 text-body text-muted shadow-sm transition duration-calm ease-calm hover:border-sage-300 hover:shadow-md" id="nv-search-trigger" aria-label="Search notes (Ctrl+K)"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search shrink-0" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><span class="flex-1 text-left">Search notes…</span><kbd class="hidden rounded-tiny border border-border bg-surface px-1.5 py-0.5 text-micro sm:inline">⌘K</kbd></button><div class="ml-auto flex items-center gap-2"><button type="button" id="nv-theme-toggle" aria-label="Switch to dark theme" title="Dark theme" class="flex h-9 w-9 items-center justify-center rounded-button border border-border bg-surface text-secondary transition duration-calm ease-calm hover:border-sage-300 hover:text-ink"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg></button></div></header>
+    <main class="flex-1 px-5 py-7 md:px-12 md:py-11 max-w-shell w-full mx-auto">
+      
+    <div class="space-y-7">
+      <header class="space-y-3">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-meta text-muted">
+          <a href="../../subjects/index.html" class="hover:text-sage-700">Subjects</a>
+          <span>›</span>
+          <span class="text-ink font-medium">MA10021</span>
+        </nav>
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center rounded-full bg-primary-soft px-2.5 py-0.5 text-micro font-semibold text-primary-strong">MA10021</span>
+              <span class="text-micro text-muted">Semester 1 · L2·T1·P0 | 3 Credits</span>
+            </div>
+            <h1 class="mt-2 text-page font-heading tracking-[-0.01em] text-ink">Mathematics for Engineers</h1>
+            <p class="mt-1 text-body text-secondary">47 study resources available</p>
+          </div>
+          <input id="nv-subj-detail-search" type="search" placeholder="Filter in MA10021…" class="h-10 rounded-input border border-border bg-surface px-3.5 text-body text-ink placeholder:text-muted focus:outline-none focus:border-sage-400"/>
+        </div>
+        <div id="nv-type-pills" class="flex flex-wrap gap-2 pt-1"><button type="button" data-type="all" class="nv-filter-pill active rounded-full border border-sage-300 bg-primary-soft px-3 py-1 text-micro font-semibold text-primary-strong">All (47)</button><button type="button" data-type="ASSIGNMENT" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Assignment (4)</button><button type="button" data-type="CHEAT_SHEET" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Cheat Sheet (1)</button><button type="button" data-type="NOTES" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Notes (28)</button><button type="button" data-type="PYQ" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">PYQ (13)</button><button type="button" data-type="SYLLABUS" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Syllabus (1)</button></div>
+      </header>
+      <div class="overflow-hidden rounded-md border border-border bg-surface shadow-sm">
+        <ul id="nv-subj-resource-list" class="divide-y divide-border-soft">
+          
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics for engineers — previous year paper (solution mst 1 ma10021(jan june26)) solution mst 1 ma10021(jan-june26).pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk64b003p15ht27ez9fwf/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Previous Year Paper (Solution MST 1 MA10021(Jan June26))</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Solution MST 1 MA10021(jan-june26).pdf · 3.7 MB · 954 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/Solution MST 1 MA10021(jan-june26).pdf" href="https://drive.google.com/file/d/15hx9qV2SJW1Tn7OsUaqgPRL8SGg0SUa1/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk64b003p15ht27ez9fwf" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics ii — mst 1 question paper mathematics-2-mst1.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxwz800bb9duij7xjdcku/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics II — MST 1 Question Paper</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">mathematics-2-mst1.pdf · 7.9 MB · 867 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/mathematics-2-mst1.pdf" href="https://drive.google.com/file/d/135Y7vNeeKsvVjeBVzb-u_Cd3lvAY4inH/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxwz800bb9duij7xjdcku" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics for engineers — previous year paper (sem2mst1) sem2mst1.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk60j003n15htabir05tg/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Previous Year Paper (Sem2MST1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Sem2MST1.pdf · 1.3 MB · 829 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/Sem2MST1.pdf" href="https://drive.google.com/file/d/1JUrAVJnOJaEN3M4-uAiaNxgU2r0G43fe/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk60j003n15htabir05tg" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics for engineers — previous year paper (mst 2 solution ma 10021) mst 2 solution ma 10021.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk470003f15htzc2xhywp/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Previous Year Paper (MST 2 Solution MA 10021)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">MST 2 solution MA 10021.pdf · 1017.3 KB · 803 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/MST 2 solution MA 10021.pdf" href="https://drive.google.com/file/d/1Gi2A4sc7hIuqRgEGxK0mS2uHZRL0a4YI/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk470003f15htzc2xhywp" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics for engineers — previous year paper (sem1mst2) sem1mst2.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk5wi003l15htf02ww7vx/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Previous Year Paper (SEM1MST2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">SEM1MST2.pdf · 1.4 MB · 798 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/SEM1MST2.pdf" href="https://drive.google.com/file/d/1CHrk74XmihILAnUOwch2mgavbSQDrx_3/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk5wi003l15htf02ww7vx" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics i — mst 2 question paper math-mst2-sema.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxwrs00b99duie8j38i8q/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics I — MST 2 Question Paper</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">math-mst2-semA.pdf · 268.6 KB · 785 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/math-mst2-semA.pdf" href="https://drive.google.com/file/d/1H3QuaqMAXqZ_Z8mdcHfKRykuxIKYh3Gw/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxwrs00b99duie8j38i8q" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics for engineers — previous year paper (sem1mst1) sem1mst1.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk5s4003j15hth5yyct1v/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Previous Year Paper (Sem1MST1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Sem1MST1.pdf · 1.5 MB · 758 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/Sem1MST1.pdf" href="https://drive.google.com/file/d/1fcr1pBZo-Y-5QthcFL-CKbWvtf84XO9m/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk5s4003j15hth5yyct1v" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="CHEAT_SHEET" data-search="mathematics — cheat sheet maths-cheat-sheet.pdf cheat sheet">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxxat00bd9duiy3woyjdm/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics — Cheat Sheet</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">maths-cheat-sheet.pdf · 2.7 MB · 755 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Cheat Sheet</span>
+            <a data-asset-href="mathematics/maths-cheat-sheet.pdf" href="https://drive.google.com/file/d/1DphRMD6zYLYUHNqtuomql0V9RNRmQTXq/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxxat00bd9duiy3woyjdm" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="ma10021 previous year question paper end sem ma10021-previous-year-question-paper-end-sem.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxvo800b19duilyjptgvs/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Ma10021 Previous Year Question Paper End Sem</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ma10021-previous-year-question-paper-end-sem.pdf · 1.1 MB · 715 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/ma10021-previous-year-question-paper-end-sem.pdf" href="https://drive.google.com/file/d/1_MWoBvZZFEpXHiSaWb7C2Zk9VKrtEY36/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxvo800b19duilyjptgvs" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="ma10021 previous year question paper end sem 2 ma10021-previous-year-question-paper-end-sem-2.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxv4c00ax9duin1ws20ht/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Ma10021 Previous Year Question Paper End Sem 2</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ma10021-previous-year-question-paper-end-sem-2.pdf · 716.1 KB · 698 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/ma10021-previous-year-question-paper-end-sem-2.pdf" href="https://drive.google.com/file/d/1RF_4BkuVWpkqVCZxnaXlc3RT-vNnvrZY/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxv4c00ax9duin1ws20ht" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics ii pyqs mathematics-ii pyqs.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk0u9003315htuuyreqpp/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics II PYQs</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Mathematics-II PYQs.pdf · 8.2 MB · 676 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/Mathematics-II PYQs.pdf" href="https://drive.google.com/file/d/1SnjBUo-XAZSFbnY11cGkA8_Uqm_5IHo9/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk0u9003315htuuyreqpp" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics i — mst 1 question paper math-mst1-sema.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxwjj00b79dui6x359kvb/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics I — MST 1 Question Paper</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">math-mst1-semA.pdf · 85.7 KB · 653 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/math-mst1-semA.pdf" href="https://drive.google.com/file/d/1iYLOf8M73ufYiJHKd_52IcfNnLh8FPRM/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxwjj00b79dui6x359kvb" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="mathematics for engineers — notes (maths) maths.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk2y8003d15ht3qdnu8k9/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Notes (Maths)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">maths.pdf · 5.5 MB · 649 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/maths.pdf" href="https://drive.google.com/file/d/1o48jwvsDbrV8uk1DvMFWcbFFlpJXUdr2/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk2y8003d15ht3qdnu8k9" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="integration — notes integration.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxuer00at9duizouzkp3v/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Integration — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">integration.pdf · 22.3 MB · 638 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/integration.pdf" href="https://drive.google.com/file/d/1fS6oxCQwHQIV4J9s7WHYm9dA-oL_pdtB/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxuer00at9duizouzkp3v" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="matrices — notes (set 2) matrices-sema.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxy9300bn9duiolrsp46h/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Matrices — Notes (Set 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">matrices-semA.pdf · 4.1 MB · 636 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/matrices-semA.pdf" href="https://drive.google.com/file/d/1-g-2qYNYt7smse2hq5DzrWRQEjz1O2FG/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxy9300bn9duiolrsp46h" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="mathematics for engineers — notes (maths 2 pa) maths-2 pa.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk1ue003b15ht2ah79xzs/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Notes (Maths 2 Pa)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">maths-2 pa.pdf · 17.9 MB · 633 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/maths-2 pa.pdf" href="https://drive.google.com/file/d/16RdFRNv5jxMwCoUPx2VqxNrX-u3zs1ZA/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk1ue003b15ht2ah79xzs" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="successive differentiation — notes successive-differentiation.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxzoj00bx9duifooaybu0/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Successive Differentiation — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">successive-differentiation.pdf · 12.1 MB · 633 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/successive-differentiation.pdf" href="https://drive.google.com/file/d/1jUyRILfCYtOndPpthVrNIMYijbtOGOqn/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxzoj00bx9duifooaybu0" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="mathematics for engineers — notes (ma10021 unit 1 indian mathematicians (2)) ma10021_unit 1_indian mathematicians (2).pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk0pu003115ht9uvy5frw/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Notes (MA10021 Unit 1 Indian Mathematicians (2))</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">MA10021_Unit 1_Indian mathematicians (2).pdf · 131.9 KB · 625 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/MA10021_Unit 1_Indian mathematicians (2).pdf" href="https://drive.google.com/file/d/1tL682savtOrPcShCUFs4VUJjEVjoY8u6/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk0pu003115ht9uvy5frw" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="mathematics for engineers — notes (maths 1) maths-1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk1kt003915htoilremdu/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Notes (Maths 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">maths-1.pdf · 1.8 MB · 624 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/maths-1.pdf" href="https://drive.google.com/file/d/1qn1rzZeZaNW_TrguLURCsWIt_3a0cuLV/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk1kt003915htoilremdu" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="matrices — notes (part 1) matrices-1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxxo800bh9duikkfept3k/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Matrices — Notes (Part 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">matrices-1.pdf · 25.2 MB · 613 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/matrices-1.pdf" href="https://drive.google.com/file/d/1yXQoZ9sIbzgMe4Abn8WJFL_dYSwLtOl1/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxxo800bh9duikkfept3k" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="mathematics for engineers — notes (identical distri permutations ex&#x27;s) identical distri permutations ex&#x27;s .pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk0kb002z15htw4kt11bd/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Notes (Identical Distri Permutations Ex&#x27;S)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Identical distri permutations ex&#x27;s .pdf · 1.6 MB · 599 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/Identical distri permutations ex&#x27;s .pdf" href="https://drive.google.com/file/d/18xPbTixxpcP8SwFVzbjcVFRFeilqnode/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk0kb002z15htw4kt11bd" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="differential equations — notes (part 1) differential-equations-1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxs1e00ab9dui3y99ttxk/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Differential Equations — Notes (Part 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">differential-equations-1.pdf · 6.0 MB · 591 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/differential-equations-1.pdf" href="https://drive.google.com/file/d/1chKchGvrysfgp9E996tH7EvGflzaYjCE/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxs1e00ab9dui3y99ttxk" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="mathematics for engineers — assignment (ma10021 assignment 1) ma10021_assignment_1.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdoll001dy3kvkuy0qyr7/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Assignment (MA10021 Assignment 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">MA10021_Assignment_1.pdf · 258.5 KB · 577 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="mathematics/MA10021_Assignment_1.pdf" href="https://drive.google.com/file/d/1x0ZjMMuenxePhA_ZQPZU34Ff90GLJbES/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdoll001dy3kvkuy0qyr7" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="matrices — notes (part 2) matrices-2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxxu600bj9duik2wfjqfd/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Matrices — Notes (Part 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">matrices-2.pdf · 9.8 MB · 577 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/matrices-2.pdf" href="https://drive.google.com/file/d/1YaSiAWoF1um1nUdasgOFMjCiuBVyjIIM/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxxu600bj9duik2wfjqfd" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="differential equations — notes (part 2) differential-equations-2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxscs00ad9duinaz07qc6/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Differential Equations — Notes (Part 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">differential-equations-2.pdf · 1.8 MB · 566 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/differential-equations-2.pdf" href="https://drive.google.com/file/d/1FmfYG75Yu2-OQC8Sw3ndkFSTaJvw8Xeb/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxscs00ad9duinaz07qc6" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fuzzy sets — notes fuzzy-sets.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxsx400ah9dui4tisepei/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fuzzy Sets — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">fuzzy-sets.pdf · 450.4 KB · 561 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/fuzzy-sets.pdf" href="https://drive.google.com/file/d/1Y7dVJje2U7skYK2UQvMwxMwTc_ZJ7AtL/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxsx400ah9dui4tisepei" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="ma10021 previous year question paper end sem 2024 ma10021-previous-year-question-paper-end-sem-2024.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxvfp00az9duiaoznklsg/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Ma10021 Previous Year Question Paper End Sem 2024</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ma10021-previous-year-question-paper-end-sem-2024.pdf · 17.9 MB · 534 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/ma10021-previous-year-question-paper-end-sem-2024.pdf" href="https://drive.google.com/file/d/1BlnET6Ti_h4MCijKkwSX7ursmzy7o66t/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxvfp00az9duiaoznklsg" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="mathematics i — all theorems compilation all-theorems.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxpco009r9duixewj2y33/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics I — All Theorems Compilation</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">all-theorems.pdf · 1.9 MB · 531 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/all-theorems.pdf" href="https://drive.google.com/file/d/1JV08FOqz3RY4FTux8D24fu8dtl0CRfr1/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxpco009r9duixewj2y33" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="double integrals — notes double-integrals.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxso700af9duikhkmhp9v/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Double Integrals — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">double-integrals.pdf · 3.0 MB · 530 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/double-integrals.pdf" href="https://drive.google.com/file/d/1oug2dJBrXBnWvUZZ3rd7dOLZswEyk3yi/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxso700af9duikhkmhp9v" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="beta &amp; gamma functions — notes beta-gamma-functions.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxquq00a39dui91yps59y/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Beta &amp; Gamma Functions — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">beta-gamma-functions.pdf · 2.2 MB · 523 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/beta-gamma-functions.pdf" href="https://drive.google.com/file/d/1CYzrt3baJmtJQt8Qbld83iZJFX9Dkxi5/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxquq00a39dui91yps59y" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="mathematics i — previous year questions (set 2) m02-previous-years-2.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxuq400av9duigv740q63/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics I — Previous Year Questions (Set 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">m02-previous-years-2.pdf · 1.4 MB · 521 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="mathematics/m02-previous-years-2.pdf" href="https://drive.google.com/file/d/1hHIzMz3gCjaC8BsXohInhtW5DjLVJ-hk/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxuq400av9duigv740q63" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="contributions of indian mathematicians — unit 1 notes indian-mathematicians-unit1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxtmb00an9duir1kj2cm4/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Contributions of Indian Mathematicians — Unit 1 Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">indian-mathematicians-unit1.pdf · 131.9 KB · 513 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/indian-mathematicians-unit1.pdf" href="https://drive.google.com/file/d/1-vEtnh8oWfnlJCfqIlqqIb4qTQmTneyK/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxtmb00an9duir1kj2cm4" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="mathematics i — practice sheet 1 practice-sheet-1-first-year.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxzdy00bv9duik94wzdmt/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics I — Practice Sheet 1</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">practice-sheet-1-first-year.pdf · 465.7 KB · 508 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/practice-sheet-1-first-year.pdf" href="https://drive.google.com/file/d/1uN15GZNdTSN-QpezmGVhAQamyP1sdkhm/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxzdy00bv9duik94wzdmt" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="maxima, minima, jacobians &amp; taylor&#x27;s theorem — notes maxima-minima-jacobian-taylor.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxyfl00bp9dui0a2arg8i/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Maxima, Minima, Jacobians &amp; Taylor&#x27;s Theorem — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">maxima-minima-jacobian-taylor.pdf · 977.8 KB · 487 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/maxima-minima-jacobian-taylor.pdf" href="https://drive.google.com/file/d/1wivE8JYUWS7Q2HN4s-Lxl93If0WD7kl1/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxyfl00bp9dui0a2arg8i" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="maclaurin &amp; taylor series — notes mclaurin-taylor-series.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxys400br9duiybhxt9s4/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Maclaurin &amp; Taylor Series — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">mclaurin-taylor-series.pdf · 8.8 MB · 486 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/mclaurin-taylor-series.pdf" href="https://drive.google.com/file/d/1uOtqt7hYsNpuiSNK5mnKUCx6WrzwhedT/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxys400br9duiybhxt9s4" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="infinite series — notes (part 1) infinite-series-1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxttu00ap9duigdh2x89g/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Infinite Series — Notes (Part 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">infinite-series-1.pdf · 20.6 MB · 457 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/infinite-series-1.pdf" href="https://drive.google.com/file/d/1vhQ9T6FwEnh1Xsm72k6AgqP-vXj0x-xS/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxttu00ap9duigdh2x89g" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="asymptotes &amp; curve tracing — notes asymptotes-and-curve-tracing.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxqfm009z9duiuemy28hg/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Asymptotes &amp; Curve Tracing — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">asymptotes-and-curve-tracing.pdf · 26.5 MB · 446 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/asymptotes-and-curve-tracing.pdf" href="https://drive.google.com/file/d/1x0s6TvvsKNjJbQhEV66Fo0k7Ah7W-DMI/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxqfm009z9duiuemy28hg" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="mathematics ii — unit 5 practice questions practice-questions-unit-5.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxz1r00bt9duihe40jj13/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics II — Unit 5 Practice Questions</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">practice-questions-unit-5.pdf · 92.6 KB · 431 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/practice-questions-unit-5.pdf" href="https://drive.google.com/file/d/1VJYJkNUXmyTO4mIFqd66qe0tKnQZIhoO/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxz1r00bt9duihe40jj13" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="matrices — notes (part 3) matrices-3.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxy1l00bl9duih06ijrwf/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Matrices — Notes (Part 3)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">matrices-3.pdf · 3.1 MB · 431 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/matrices-3.pdf" href="https://drive.google.com/file/d/1FW_GWjXqwHSZMZ9Z7rS_2E0_9ALDOsKt/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxy1l00bl9duih06ijrwf" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="infinite series — notes (part 2) infinite-series-2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxu3d00ar9duirtnsub4k/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Infinite Series — Notes (Part 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">infinite-series-2.pdf · 17.2 MB · 422 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/infinite-series-2.pdf" href="https://drive.google.com/file/d/1ka0NN45x__3cbUayxxojUVCfAKDuiHkR/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxu3d00ar9duirtnsub4k" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="curvature — notes (part 2) curvature-2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxrkc00a79duiaopwhpki/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Curvature — Notes (Part 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">curvature-2.pdf · 6.8 MB · 408 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/curvature-2.pdf" href="https://drive.google.com/file/d/1e6V7FdIGogKYVvCpR4B1hQZREzXZAOvk/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxrkc00a79duiaopwhpki" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="curvature — notes (part 1) curvature-1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxr8y00a59duiw17knxh1/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Curvature — Notes (Part 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">curvature-1.pdf · 9.0 MB · 386 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/curvature-1.pdf" href="https://drive.google.com/file/d/14bRrXl6qCCoyyEZ5_r_QXPGlu3PLMiy6/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxr8y00a59duiw17knxh1" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="hyperbolic functions — notes hyperbolic-functions.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxt8y00aj9duijp7zxgmv/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Hyperbolic Functions — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">hyperbolic-functions.pdf · 12.9 MB · 298 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="mathematics/hyperbolic-functions.pdf" href="https://drive.google.com/file/d/1wLZ5RgfQ4Xd1PXJH6ypvSwLGohzf6nDj/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxt8y00aj9duijp7zxgmv" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="mathematics for engineers — assignment (maths assignment sol) maths assignment sol.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk0yq003515htbxr4es6d/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Assignment (Maths Assignment Sol)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Maths assignment sol.pdf · 2.2 MB · 274 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="mathematics/Maths assignment sol.pdf" href="https://drive.google.com/file/d/14MEDaPpPtgnEhKcrTNYQZHbnGXmop9KI/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk0yq003515htbxr4es6d" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="mathematics ii — unit 5 assignment assignment-2-unit-5.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxq54009x9duiqb4dvk11/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics II — Unit 5 Assignment</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">assignment-2-unit-5.pdf · 171.7 KB · 254 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="mathematics/assignment-2-unit-5.pdf" href="https://drive.google.com/file/d/1quLuKeke3Vb4DfFEz-6CXHavi7am4qWA/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxq54009x9duiqb4dvk11" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="SYLLABUS" data-search="mathematics for engineers — syllabus (btech 2nd year it applied maths syllabus) btech-2nd-year-it-applied-maths-syllabus.pdf syllabus">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjw50001n15htewjrpont/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics for Engineers — Syllabus (Btech 2nd Year It Applied Maths Syllabus)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">btech-2nd-year-it-applied-maths-syllabus.pdf · 392.5 KB · 245 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Syllabus</span>
+            <a data-asset-href="general/btech-2nd-year-it-applied-maths-syllabus.pdf" href="https://drive.google.com/file/d/1pz4PCiKK7ClBAkJj7Uiz6h_vP_zsRZcx/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjw50001n15htewjrpont" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="mathematics ii — assignment 2 assignment-2-sk.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxpo2009t9duisqi0n4ha/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Mathematics II — Assignment 2</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">assignment-2-sk.pdf · 4.5 MB · 140 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="mathematics/assignment-2-sk.pdf" href="https://drive.google.com/file/d/1cbHAU1HHvP0iYwEp-qJ0vD05aU3NxWp8/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxpo2009t9duisqi0n4ha" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+    
+    </main>
+  </div>
+  <nav aria-label="Bottom navigation" class="fixed bottom-0 left-0 right-0 z-40 flex h-bottomnav items-center justify-around border-t border-border bg-surface md:hidden"><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-sage-700 font-semibold" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Home</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../subjects/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Subjects</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../notes/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Notes</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../bookmarks/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg>Saved</a><button type="button" id="nv-mobile-more" aria-label="More" aria-expanded="false" class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>More</button></nav>
+  <div id="nv-mobile-drawer" class="fixed inset-0 z-[80] md:hidden pointer-events-none" aria-hidden="true"><div class="absolute inset-0 bg-[color-mix(in_srgb,var(--sage-800)_45%,transparent)] backdrop-blur-sm transition-opacity duration-300 opacity-0"></div><div role="dialog" aria-label="Navigation menu" class="absolute inset-y-0 left-0 flex w-[82%] max-w-[300px] flex-col bg-surface shadow-lg transition-transform duration-300 ease-out -translate-x-full"><div class="flex items-center justify-between px-5 py-5"><a class="flex items-center gap-3" href="../../index.html"><img src="../../sgsits-logo.webp" alt="SGSITS crest" class="h-9 w-9 shrink-0 rounded-full object-cover shadow-sm"/><span class="leading-tight"><span class="block text-micro font-semibold uppercase tracking-[0.16em] text-text-faint">SGSITS</span><span class="block text-[15px] font-heading text-ink">NotesVault</span></span></a><button id="nv-drawer-close" aria-label="Close menu" class="flex h-8 w-8 items-center justify-center rounded-button text-secondary hover:bg-surface-soft hover:text-ink"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><nav class="flex-1 overflow-y-auto px-3 pb-4"><div class="space-y-0.5"><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm bg-primary-soft font-semibold text-primary-strong" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard shrink-0" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>Dashboard</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../subjects/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open shrink-0" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Subjects</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../notes/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Notes</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../bookmarks/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark shrink-0" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg>Saved</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../pyq/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text shrink-0" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg>PYQ Papers</a></div><div class="my-3 border-t border-border-soft"></div><div class="space-y-0.5"><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../schedule/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days shrink-0" aria-hidden="true"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg>Schedule</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../about/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>About</a></div></nav></div></div>
+  <!-- Global Ctrl+K Search Modal -->
+  <div id="nv-search-modal" class="nv-modal-backdrop" role="dialog" aria-modal="true" aria-label="Search notes and subjects">
+    <div class="w-full max-w-xl overflow-hidden rounded-panel border border-border bg-surface shadow-lg">
+      <div class="flex items-center gap-2.5 border-b border-border px-4 py-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-muted"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+        <input id="nv-search-input" type="text" placeholder="Search notes, PYQs, slides, or subjects…" class="w-full bg-transparent text-body-lg text-ink placeholder:text-muted focus:outline-none"/>
+        <button id="nv-search-close" type="button" class="rounded-tiny border border-border px-2 py-0.5 text-micro text-muted hover:text-ink">Esc</button>
+      </div>
+      <div id="nv-search-results" class="max-h-[60vh] overflow-y-auto divide-y divide-border-soft p-2"></div>
+    </div>
+  </div>
+  <script src="../../assets-config.js"></script>
+  <script src="../../data/site-data.js"></script>
+  <script src="../../static-app.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="__variable_f367f3 __variable_f2d25f">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Languages for Engineers (HU10512) | SGSITS NotesVault</title>
+  <meta name="description" content="Study notes, slides, assignments and PYQs for Languages for Engineers."/>
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="16x16"/>
+  <link rel="icon" href="../../live-icon.png"/>
+  <link rel="apple-touch-icon" href="../../live-icon.png"/>
+  <link rel="preconnect" href="https://drive.google.com"/>
+  <link rel="dns-prefetch" href="https://drive.google.com"/>
+  <link rel="stylesheet" href="../../_next/static/css/b16cc34f8d6a935b.css"/>
+  <script>
+    try {
+      var t = localStorage.getItem('notes-hub:theme');
+      if (t === 'dark') document.documentElement.dataset.theme = 'dark';
+      if (localStorage.getItem('notes-hub:reduced-motion') === '1') {
+        document.documentElement.classList.add('force-reduced-motion');
+      }
+    } catch (e) {}
+    window.NV_ROOT_PREFIX = "../../";
+  </script>
+  <style>
+    .nv-modal-backdrop { position: fixed; inset: 0; z-index: 90; background: color-mix(in srgb, var(--sage-800) 45%, transparent); backdrop-filter: blur(4px); display: none; align-items: flex-start; justify-content: center; padding: 10vh 1rem 1rem; }
+    .nv-modal-backdrop.open { display: flex; }
+    .nv-collapsed aside { transform: translateX(-100%); }
+    @media (min-width: 768px) { .nv-collapsed .nv-shell { padding-left: 0 !important; } }
+    .nv-drawer-open { pointer-events: auto !important; }
+    .nv-drawer-open > div:first-child { opacity: 1 !important; }
+    .nv-drawer-open > div:last-child { transform: translateX(0) !important; }
+    .nv-badge-drive { background: color-mix(in srgb, #16a34a 14%, transparent); color: #15803d; }
+    [data-theme="dark"] .nv-badge-drive { color: #4ade80; }
+  </style>
+</head>
+<body class="antialiased pb-16 md:pb-0">
+  <aside class="hidden md:flex fixed inset-y-0 left-0 z-40 w-sidebar flex-col bg-surface border-r border-border thin-scroll overflow-y-auto transition-transform duration-calm ease-calm translate-x-0"><a class="flex items-center gap-3 px-5 py-6 shrink-0" href="../../index.html"><img src="../../sgsits-logo.webp" alt="SGSITS crest" class="h-10 w-10 shrink-0 rounded-full object-cover shadow-sm"/><span class="leading-tight"><span class="block text-micro font-semibold uppercase tracking-[0.16em] text-text-faint">SGSITS</span><span class="block text-[16px] font-heading tracking-tight text-ink">NotesVault</span></span></a><nav class="flex-1 px-3"><p class="px-2.5 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.12em] text-text-faint">Menu</p><div class="space-y-0.5"><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard shrink-0" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg></span>Dashboard</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm bg-primary-soft font-semibold text-primary-strong" href="../../subjects/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm bg-surface text-sage-700 shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open shrink-0" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg></span>Subjects</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../notes/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span>Notes</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../bookmarks/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark shrink-0" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg></span>Saved</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../pyq/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text shrink-0" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg></span>PYQ Papers</a></div><div class="my-4 border-t border-border-soft"></div><p class="px-2.5 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.12em] text-text-faint">More</p><div class="space-y-0.5"><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../schedule/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days shrink-0" aria-hidden="true"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg></span>Schedule</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../about/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span>About</a></div></nav><div class="mx-3 mb-4 mt-2"><div class="relative overflow-hidden rounded-panel border border-border bg-primary-soft p-4"><span class="absolute -right-3 -top-3 flex h-14 w-14 items-center justify-center rounded-full bg-cream text-cream-ink opacity-70"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span><p class="relative text-body font-semibold text-ink mb-1">Contribute notes</p><p class="relative text-micro text-secondary mb-3 leading-relaxed max-w-[85%]">Share your notes and help fellow students.</p><a class="relative inline-flex items-center gap-1 rounded-button bg-surface px-3 py-1.5 text-micro font-semibold text-ink shadow-sm transition duration-calm ease-calm hover:text-primary" href="../../uploads/index.html">Upload notes <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></a></div><p class="mt-3 px-1 text-micro text-text-faint leading-relaxed">Unofficial student resource · not an official SGSITS portal</p></div></aside>
+  <div class="nv-shell flex flex-col min-h-screen transition-[padding] duration-calm ease-calm md:pl-sidebar">
+    <header class="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-border bg-[color-mix(in_srgb,var(--surface)_90%,transparent)] backdrop-blur-sm px-6 md:px-9"><button type="button" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-secondary transition duration-calm ease-calm hover:border-sage-300 hover:text-ink" id="nv-sidebar-toggle" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button><button type="button" class="flex w-full max-w-[380px] items-center gap-2.5 rounded-full border border-border bg-background px-4 py-2.5 text-body text-muted shadow-sm transition duration-calm ease-calm hover:border-sage-300 hover:shadow-md" id="nv-search-trigger" aria-label="Search notes (Ctrl+K)"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search shrink-0" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><span class="flex-1 text-left">Search notes…</span><kbd class="hidden rounded-tiny border border-border bg-surface px-1.5 py-0.5 text-micro sm:inline">⌘K</kbd></button><div class="ml-auto flex items-center gap-2"><button type="button" id="nv-theme-toggle" aria-label="Switch to dark theme" title="Dark theme" class="flex h-9 w-9 items-center justify-center rounded-button border border-border bg-surface text-secondary transition duration-calm ease-calm hover:border-sage-300 hover:text-ink"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg></button></div></header>
+    <main class="flex-1 px-5 py-7 md:px-12 md:py-11 max-w-shell w-full mx-auto">
+      
+    <div class="space-y-7">
+      <header class="space-y-3">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-meta text-muted">
+          <a href="../../subjects/index.html" class="hover:text-sage-700">Subjects</a>
+          <span>›</span>
+          <span class="text-ink font-medium">HU10512</span>
+        </nav>
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center rounded-full bg-primary-soft px-2.5 py-0.5 text-micro font-semibold text-primary-strong">HU10512</span>
+              <span class="text-micro text-muted">Semester 2 · L1·T1·P2 | 2 Credits</span>
+            </div>
+            <h1 class="mt-2 text-page font-heading tracking-[-0.01em] text-ink">Languages for Engineers</h1>
+            <p class="mt-1 text-body text-secondary">34 study resources available</p>
+          </div>
+          <input id="nv-subj-detail-search" type="search" placeholder="Filter in HU10512…" class="h-10 rounded-input border border-border bg-surface px-3.5 text-body text-ink placeholder:text-muted focus:outline-none focus:border-sage-400"/>
+        </div>
+        <div id="nv-type-pills" class="flex flex-wrap gap-2 pt-1"><button type="button" data-type="all" class="nv-filter-pill active rounded-full border border-sage-300 bg-primary-soft px-3 py-1 text-micro font-semibold text-primary-strong">All (34)</button><button type="button" data-type="ASSIGNMENT" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Assignment (2)</button><button type="button" data-type="LAB_MANUAL" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Lab Manual (6)</button><button type="button" data-type="NOTES" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Notes (23)</button><button type="button" data-type="PYQ" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">PYQ (1)</button><button type="button" data-type="SLIDES" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Slides (2)</button></div>
+      </header>
+      <div class="overflow-hidden rounded-md border border-border bg-surface shadow-sm">
+        <ul id="nv-subj-resource-list" class="divide-y divide-border-soft">
+          
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (hu10512 technical report cryptocurrency) hu10512_technical_report_cryptocurrency.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdoia001by3kvkswab4wh/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (HU10512 Technical Report Cryptocurrency)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">HU10512_Technical_Report_Cryptocurrency.pdf · 3.3 MB · 571 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/HU10512_Technical_Report_Cryptocurrency.pdf" href="https://drive.google.com/file/d/10b8U1rZDVGvTKAa16LV_v5n-OztnaRga/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdoia001by3kvkswab4wh" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (hu10512 letter writing technical communication) hu10512_letter_writing_technical_communication.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdo880015y3kv513chs4w/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (HU10512 Letter Writing Technical Communication)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">HU10512_Letter_Writing_Technical_Communication.pdf · 2.8 MB · 548 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/HU10512_Letter_Writing_Technical_Communication.pdf" href="https://drive.google.com/file/d/15Lwe001JYedxvCigY3F_-HXpFB13l9T5/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdo880015y3kv513chs4w" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (hu10512 routine business letters) hu10512_routine_business_letters.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdoew0019y3kvbvb0ntd4/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (HU10512 Routine Business Letters)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">HU10512_Routine_Business_Letters.pdf · 1.4 MB · 544 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/HU10512_Routine_Business_Letters.pdf" href="https://drive.google.com/file/d/1Zf0BfZZA6iZF3q6FfwVipasc0LTY4hjw/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdoew0019y3kvbvb0ntd4" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (hu10512 resume writing notes) hu10512_resume_writing_notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdobq0017y3kvk65ivpwq/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (HU10512 Resume Writing Notes)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">HU10512_Resume_Writing_Notes.pdf · 20.7 MB · 540 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/HU10512_Resume_Writing_Notes.pdf" href="https://drive.google.com/file/d/1c0Quzm_bj924lxfWBjWQ2r_bOe96EFih/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdobq0017y3kvk65ivpwq" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (hu10512 cover letter example) hu10512_cover_letter_example.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdnyc000zy3kvnyvwzzoa/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (HU10512 Cover Letter Example)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">HU10512_Cover_Letter_Example.pdf · 789.5 KB · 489 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/HU10512_Cover_Letter_Example.pdf" href="https://drive.google.com/file/d/1KF9MmfBg_eDXzGsFKFDoi9WfcPMwza9c/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdnyc000zy3kvnyvwzzoa" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="hu10512 previous year question paper mid-semester test 1 2022 hu10512-previous-year-question-paper-mst-1-2022.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oycky00e99dui70h4ggc8/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Hu10512 Previous Year Question Paper Mid-Semester Test 1 2022</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">hu10512-previous-year-question-paper-mst-1-2022.pdf · 8.4 MB · 469 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="languages/hu10512-previous-year-question-paper-mst-1-2022.pdf" href="https://drive.google.com/file/d/1CRNi9c61l2ua4pkh0OlXcgUPd15D4REX/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oycky00e99dui70h4ggc8" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="sound &amp; spelling chart sound-spelling-chart.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oygan00ez9duiz54kryof/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Sound &amp; Spelling Chart</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">sound-spelling-chart.pdf · 1.3 MB · 429 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/sound-spelling-chart.pdf" href="https://drive.google.com/file/d/1ooJ-P9WTNge0TEzko2rP3PDUahXp0bZW/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oygan00ez9duiz54kryof" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="LAB_MANUAL" data-search="languages for engineers — lab manual (hu10512 language lab manual) hu10512_language_lab_manual.pdf lab manual">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdo4w0013y3kvec7ryz5z/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Lab Manual (HU10512 Language Lab Manual)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">HU10512_Language_Lab_Manual.pdf · 16.2 MB · 417 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Lab Manual</span>
+            <a data-asset-href="languages/HU10512_Language_Lab_Manual.pdf" href="https://drive.google.com/file/d/11TUjbDV3hiPWjQl5RK_zqDfEqnGXc4q0/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdo4w0013y3kvec7ryz5z" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="LAB_MANUAL" data-search="languages for engineers — lab manual (hu10512 english lab manual) hu10512_english_lab_manual.pdf lab manual">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdo1o0011y3kvfjsw7182/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Lab Manual (HU10512 English Lab Manual)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">HU10512_English_Lab_Manual.pdf · 1.1 MB · 403 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Lab Manual</span>
+            <a data-asset-href="languages/HU10512_English_Lab_Manual.pdf" href="https://drive.google.com/file/d/1cA2ua6_FgTg6V9WjPu78xRR4wGGbsc-e/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdo1o0011y3kvfjsw7182" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="oral presentation — notes oral-presentation-notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyemw00en9duiglffkf75/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Oral Presentation — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">oral-presentation-notes.pdf · 465.1 KB · 375 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/oral-presentation-notes.pdf" href="https://drive.google.com/file/d/1S8FQH8Dnb8OXfM02KtRVX3NrHkWK0H9n/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyemw00en9duiglffkf75" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="sq3r reading method — notes sq3r-method-notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oygro00f19dui6c4wwedk/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">SQ3R Reading Method — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">sq3r-method-notes.pdf · 296.2 KB · 374 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/sq3r-method-notes.pdf" href="https://drive.google.com/file/d/1f9eSu9qXi26HTK-C2LvloO1WVRSS9YR-/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oygro00f19dui6c4wwedk" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="language skills — notes language-skills.docx notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oydj300ef9dui0nszmjz4/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Language Skills — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">language-skills.docx · 388.8 KB · 362 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/language-skills.docx" href="https://drive.google.com/file/d/1KX2FpdL5WH4sUlxPAD_NcU0BUBZ1vTPl/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oydj300ef9dui0nszmjz4" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="technical english — unit 2 notes unit2-technical-english-notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyh3300f39duidcn8lpui/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Technical English — Unit 2 Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">unit2-technical-english-notes.pdf · 12.5 MB · 358 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/unit2-technical-english-notes.pdf" href="https://drive.google.com/file/d/15ZZpxMF7I4YDMAVRcDruTVXF1IQxoQIY/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyh3300f39duidcn8lpui" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="project report — sample document project-report-sample-document.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyffe00et9duilf6qotg0/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Project Report — Sample Document</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">project-report-sample-document.pdf · 339.9 KB · 341 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/project-report-sample-document.pdf" href="https://drive.google.com/file/d/1i2KqhCbaczv7noNQBOd03ZOTFewCZm4K/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyffe00et9duilf6qotg0" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="communication skills — notes communication-notes.docx notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyaop00dx9dui1n8ufwwt/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Communication Skills — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">communication-notes.docx · 314.4 KB · 326 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/communication-notes.docx" href="https://drive.google.com/file/d/1WsZRRPUkK1o9-AppiU3W4xrKY_ZppyuS/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyaop00dx9dui1n8ufwwt" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="LAB_MANUAL" data-search="hu10512 lab manual hu10512-lab-manual.pdf lab manual">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oybvi00e59dui3xm3xkfa/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Hu10512 Lab Manual</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">hu10512-lab-manual.pdf · 3.1 MB · 310 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Lab Manual</span>
+            <a data-asset-href="languages/hu10512-lab-manual.pdf" href="https://drive.google.com/file/d/137dpQkb4xiaBF-KYVMtDj5oXkfLxA3Ya/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oybvi00e59dui3xm3xkfa" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (unit 1 question) unit - 1 question.docx notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk084002t15htb8vgxuy3/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (Unit 1 Question)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Unit - 1 Question.docx · 16.0 KB · 300 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/Unit - 1 Question.docx" href="https://drive.google.com/file/d/1EJQPvxXlcb_WzTQj7DjMgv-dJNT10qWj/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk084002t15htb8vgxuy3" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="linguistics — notes linguistics.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oydtu00eh9duiujao0r28/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Linguistics — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">linguistics.pdf · 558.2 KB · 288 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/linguistics.pdf" href="https://drive.google.com/file/d/1qm2HRxAYhYxG83Rx-0r5eMKM-qHd1eJ9/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oydtu00eh9duiujao0r28" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (unit 2 question) unit - 2  question.docx notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk0cj002v15htvcbozc39/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (Unit 2 Question)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Unit - 2  Question.docx · 20.8 KB · 286 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/Unit - 2  Question.docx" href="https://drive.google.com/file/d/1rveCmXIszoAMawl7l8gMPJiFAJBsEIMb/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk0cj002v15htvcbozc39" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (project report sample document) project report sample document.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjzvv002n15htr4lzqsge/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (Project Report Sample Document)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Project Report Sample Document.pdf · 339.9 KB · 273 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/Project Report Sample Document.pdf" href="https://drive.google.com/file/d/1mFiBcK-t1B0TzB5KMmVaePEs6f5f5Vov/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjzvv002n15htr4lzqsge" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (sq3r method notes btech 1st year) sq3r_method_notes_btech 1st year.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk00b002p15htnwgid813/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (SQ3R Method Notes BTech 1st Year)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">SQ3R_Method_Notes_BTech 1st year.pdf · 296.2 KB · 272 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/SQ3R_Method_Notes_BTech 1st year.pdf" href="https://drive.google.com/file/d/1OKeBX8wRLh4CNgbON6qbszrIOBDzsMt9/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk00b002p15htnwgid813" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="SLIDES" data-search="hu10512 slides hu10512-slides.pptx slides">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oycwc00eb9duic3dnial3/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PPTX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Hu10512 Slides</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">hu10512-slides.pptx · 3.8 MB · 269 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Slides</span>
+            <a data-asset-href="languages/hu10512-slides.pptx" href="https://drive.google.com/file/d/1X_VUUXoRKyLVZbFtBGPdGxb_F76q_f-Z/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oycwc00eb9duic3dnial3" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="languages for engineers — notes (lsrw notes 1st year) lsrw notes 1st year.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjzq8002l15htwwluof2v/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Languages for Engineers — Notes (Lsrw Notes 1st Year)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lsrw notes 1st year.pdf · 110.0 KB · 266 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/lsrw notes 1st year.pdf" href="https://drive.google.com/file/d/1M2nxIL-uykhg4Js99uU81RXeh9ZXf3gy/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjzq8002l15htwwluof2v" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="sgsits english proficiency test — sample paper sgsits-english-proficiency-test.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyg0x00ex9duijgjvqs1y/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">SGSITS English Proficiency Test — Sample Paper</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">sgsits-english-proficiency-test.pdf · 222.0 KB · 257 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/sgsits-english-proficiency-test.pdf" href="https://drive.google.com/file/d/16xY9pOZE_7VrHcLKuiz-zz6DuxYNRhEU/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyg0x00ex9duijgjvqs1y" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="LAB_MANUAL" data-search="hu10512 lab manual 2 hu10512-lab-manual-2.pdf lab manual">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oybmd00e39duiaik0gccs/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Hu10512 Lab Manual 2</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">hu10512-lab-manual-2.pdf · 3.6 MB · 250 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Lab Manual</span>
+            <a data-asset-href="languages/hu10512-lab-manual-2.pdf" href="https://drive.google.com/file/d/1fbPDPYw175_xjdSfI0UKFiwTLWs0zemh/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oybmd00e39duiaik0gccs" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="listening, speaking, reading &amp; writing (lsrw) — notes lsrw-notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oye3100ej9dui3vhwor3x/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Listening, Speaking, Reading &amp; Writing (LSRW) — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lsrw-notes.pdf · 110.0 KB · 242 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/lsrw-notes.pdf" href="https://drive.google.com/file/d/1KwEx9nAe8FPiqRG765KBuvA3sPgGLp91/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oye3100ej9dui3vhwor3x" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="project writing — notes project-writing-notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyfqq00ev9duiqgqf40x4/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Project Writing — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">project-writing-notes.pdf · 3.9 MB · 222 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/project-writing-notes.pdf" href="https://drive.google.com/file/d/11ScWrJkAv7ds3wrZit5GT-gMFI0kIDHQ/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyfqq00ev9duiqgqf40x4" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="LAB_MANUAL" data-search="english lab manual (alternate copy) english-lab-manual-google-docs.pdf lab manual">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyb5s00dz9duiqy3rs2pt/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">English Lab Manual (Alternate Copy)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">english-lab-manual-google-docs.pdf · 831.9 KB · 220 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Lab Manual</span>
+            <a data-asset-href="languages/english-lab-manual-google-docs.pdf" href="https://drive.google.com/file/d/12n649k-ijh-eXtitdk9Bcp1ltUK6KXDw/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyb5s00dz9duiqy3rs2pt" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="hu10512 languages for engineers assignment 1 (1) hu10512 languages for engineers assignment 1 (1).docx assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjzlu002j15ht4xo8rfll/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">HU10512 Languages For Engineers Assignment 1 (1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">HU10512 Languages for Engineers Assignment 1 (1).docx · 13.5 KB · 215 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="languages/HU10512 Languages for Engineers Assignment 1 (1).docx" href="https://drive.google.com/file/d/18KDArJ9OZHez1XIsrmWbDx8xHyS8hXvX/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjzlu002j15ht4xo8rfll" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="assignment 2 hu10512 languages for engineers assignment 2 hu10512 languages for engineers.docx assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tjzgc002h15ht10k5msia/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Assignment 2 HU10512 LANGUAGES FOR ENGINEERS</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">Assignment 2 HU10512 LANGUAGES FOR ENGINEERS.docx · 12.6 KB · 211 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="languages/Assignment 2 HU10512 LANGUAGES FOR ENGINEERS.docx" href="https://drive.google.com/file/d/1HBqYJXedGXUWSOY9JtMU3mxwuaSuZo1H/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tjzgc002h15ht10k5msia" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="LAB_MANUAL" data-search="english lab manual (set 2) lab-manual-english.pdf lab manual">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyd7q00ed9dui4959m199/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">English Lab Manual (Set 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lab-manual-english.pdf · 12.1 MB · 208 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Lab Manual</span>
+            <a data-asset-href="languages/lab-manual-english.pdf" href="https://drive.google.com/file/d/1MmpaXEu5zUimT8qjJj6d0X2Vz3nVKJZT/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyd7q00ed9dui4959m199" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="english lab record — sample submission english-lab-tanmay-mehta.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oybeb00e19duizzmh0p0e/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">English Lab Record — Sample Submission</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">english-lab-tanmay-mehta.pdf · 6.6 MB · 197 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/english-lab-tanmay-mehta.pdf" href="https://drive.google.com/file/d/1A8JWkKomtpnfC72DHkMUkS2O2u8-z28w/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oybeb00e19duizzmh0p0e" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="hu10512 lab record hu10512-lab-record.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyc6r00e79duigckippug/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Hu10512 Lab Record</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">hu10512-lab-record.pdf · 6.9 MB · 181 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="languages/hu10512-lab-record.pdf" href="https://drive.google.com/file/d/1A5-9XoZjYZ2nVS3uRQQ4BLlQdc2Uxf__/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyc6r00e79duigckippug" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="SLIDES" data-search="public speaking — class slides ppt-public-speaking.ppt slides">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oyeya00ep9dui15y5jywl/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PPT</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Public Speaking — Class Slides</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">ppt-public-speaking.ppt · 560.5 KB · 141 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Slides</span>
+            <a data-asset-href="languages/ppt-public-speaking.ppt" href="https://drive.google.com/file/d/1pAHsK1MCLfhW9b8TB78bs1YIPQSFKR7H/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oyeya00ep9dui15y5jywl" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+    
+    </main>
+  </div>
+  <nav aria-label="Bottom navigation" class="fixed bottom-0 left-0 right-0 z-40 flex h-bottomnav items-center justify-around border-t border-border bg-surface md:hidden"><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-sage-700 font-semibold" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Home</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../subjects/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Subjects</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../notes/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Notes</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../bookmarks/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg>Saved</a><button type="button" id="nv-mobile-more" aria-label="More" aria-expanded="false" class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>More</button></nav>
+  <div id="nv-mobile-drawer" class="fixed inset-0 z-[80] md:hidden pointer-events-none" aria-hidden="true"><div class="absolute inset-0 bg-[color-mix(in_srgb,var(--sage-800)_45%,transparent)] backdrop-blur-sm transition-opacity duration-300 opacity-0"></div><div role="dialog" aria-label="Navigation menu" class="absolute inset-y-0 left-0 flex w-[82%] max-w-[300px] flex-col bg-surface shadow-lg transition-transform duration-300 ease-out -translate-x-full"><div class="flex items-center justify-between px-5 py-5"><a class="flex items-center gap-3" href="../../index.html"><img src="../../sgsits-logo.webp" alt="SGSITS crest" class="h-9 w-9 shrink-0 rounded-full object-cover shadow-sm"/><span class="leading-tight"><span class="block text-micro font-semibold uppercase tracking-[0.16em] text-text-faint">SGSITS</span><span class="block text-[15px] font-heading text-ink">NotesVault</span></span></a><button id="nv-drawer-close" aria-label="Close menu" class="flex h-8 w-8 items-center justify-center rounded-button text-secondary hover:bg-surface-soft hover:text-ink"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><nav class="flex-1 overflow-y-auto px-3 pb-4"><div class="space-y-0.5"><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm bg-primary-soft font-semibold text-primary-strong" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard shrink-0" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>Dashboard</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../subjects/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open shrink-0" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Subjects</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../notes/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Notes</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../bookmarks/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark shrink-0" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg>Saved</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../pyq/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text shrink-0" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg>PYQ Papers</a></div><div class="my-3 border-t border-border-soft"></div><div class="space-y-0.5"><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../schedule/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days shrink-0" aria-hidden="true"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg>Schedule</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../about/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>About</a></div></nav></div></div>
+  <!-- Global Ctrl+K Search Modal -->
+  <div id="nv-search-modal" class="nv-modal-backdrop" role="dialog" aria-modal="true" aria-label="Search notes and subjects">
+    <div class="w-full max-w-xl overflow-hidden rounded-panel border border-border bg-surface shadow-lg">
+      <div class="flex items-center gap-2.5 border-b border-border px-4 py-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-muted"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+        <input id="nv-search-input" type="text" placeholder="Search notes, PYQs, slides, or subjects…" class="w-full bg-transparent text-body-lg text-ink placeholder:text-muted focus:outline-none"/>
+        <button id="nv-search-close" type="button" class="rounded-tiny border border-border px-2 py-0.5 text-micro text-muted hover:text-ink">Esc</button>
+      </div>
+      <div id="nv-search-results" class="max-h-[60vh] overflow-y-auto divide-y divide-border-soft p-2"></div>
+    </div>
+  </div>
+  <script src="../../assets-config.js"></script>
+  <script src="../../data/site-data.js"></script>
+  <script src="../../static-app.js"></script>
+  
+</body>
+</html>

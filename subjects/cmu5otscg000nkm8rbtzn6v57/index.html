@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" class="__variable_f367f3 __variable_f2d25f">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Fundamentals of IT &amp; Artificial Intelligence (IT10007) | SGSITS NotesVault</title>
+  <meta name="description" content="Study notes, slides, assignments and PYQs for Fundamentals of IT &amp; Artificial Intelligence."/>
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon" sizes="16x16"/>
+  <link rel="icon" href="../../live-icon.png"/>
+  <link rel="apple-touch-icon" href="../../live-icon.png"/>
+  <link rel="preconnect" href="https://drive.google.com"/>
+  <link rel="dns-prefetch" href="https://drive.google.com"/>
+  <link rel="stylesheet" href="../../_next/static/css/b16cc34f8d6a935b.css"/>
+  <script>
+    try {
+      var t = localStorage.getItem('notes-hub:theme');
+      if (t === 'dark') document.documentElement.dataset.theme = 'dark';
+      if (localStorage.getItem('notes-hub:reduced-motion') === '1') {
+        document.documentElement.classList.add('force-reduced-motion');
+      }
+    } catch (e) {}
+    window.NV_ROOT_PREFIX = "../../";
+  </script>
+  <style>
+    .nv-modal-backdrop { position: fixed; inset: 0; z-index: 90; background: color-mix(in srgb, var(--sage-800) 45%, transparent); backdrop-filter: blur(4px); display: none; align-items: flex-start; justify-content: center; padding: 10vh 1rem 1rem; }
+    .nv-modal-backdrop.open { display: flex; }
+    .nv-collapsed aside { transform: translateX(-100%); }
+    @media (min-width: 768px) { .nv-collapsed .nv-shell { padding-left: 0 !important; } }
+    .nv-drawer-open { pointer-events: auto !important; }
+    .nv-drawer-open > div:first-child { opacity: 1 !important; }
+    .nv-drawer-open > div:last-child { transform: translateX(0) !important; }
+    .nv-badge-drive { background: color-mix(in srgb, #16a34a 14%, transparent); color: #15803d; }
+    [data-theme="dark"] .nv-badge-drive { color: #4ade80; }
+  </style>
+</head>
+<body class="antialiased pb-16 md:pb-0">
+  <aside class="hidden md:flex fixed inset-y-0 left-0 z-40 w-sidebar flex-col bg-surface border-r border-border thin-scroll overflow-y-auto transition-transform duration-calm ease-calm translate-x-0"><a class="flex items-center gap-3 px-5 py-6 shrink-0" href="../../index.html"><img src="../../sgsits-logo.webp" alt="SGSITS crest" class="h-10 w-10 shrink-0 rounded-full object-cover shadow-sm"/><span class="leading-tight"><span class="block text-micro font-semibold uppercase tracking-[0.16em] text-text-faint">SGSITS</span><span class="block text-[16px] font-heading tracking-tight text-ink">NotesVault</span></span></a><nav class="flex-1 px-3"><p class="px-2.5 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.12em] text-text-faint">Menu</p><div class="space-y-0.5"><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard shrink-0" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg></span>Dashboard</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm bg-primary-soft font-semibold text-primary-strong" href="../../subjects/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm bg-surface text-sage-700 shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open shrink-0" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg></span>Subjects</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../notes/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span>Notes</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../bookmarks/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark shrink-0" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg></span>Saved</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../pyq/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text shrink-0" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg></span>PYQ Papers</a></div><div class="my-4 border-t border-border-soft"></div><p class="px-2.5 pb-1.5 pt-1 text-micro font-semibold uppercase tracking-[0.12em] text-text-faint">More</p><div class="space-y-0.5"><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../schedule/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days shrink-0" aria-hidden="true"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg></span>Schedule</a><a class="group flex h-nav items-center gap-2.5 rounded-button pl-2 pr-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft hover:text-ink" href="../../about/index.html"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-tiny transition duration-calm ease-calm text-muted group-hover:text-sage-600"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg></span>About</a></div></nav><div class="mx-3 mb-4 mt-2"><div class="relative overflow-hidden rounded-panel border border-border bg-primary-soft p-4"><span class="absolute -right-3 -top-3 flex h-14 w-14 items-center justify-center rounded-full bg-cream text-cream-ink opacity-70"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg></span><p class="relative text-body font-semibold text-ink mb-1">Contribute notes</p><p class="relative text-micro text-secondary mb-3 leading-relaxed max-w-[85%]">Share your notes and help fellow students.</p><a class="relative inline-flex items-center gap-1 rounded-button bg-surface px-3 py-1.5 text-micro font-semibold text-ink shadow-sm transition duration-calm ease-calm hover:text-primary" href="../../uploads/index.html">Upload notes <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></a></div><p class="mt-3 px-1 text-micro text-text-faint leading-relaxed">Unofficial student resource · not an official SGSITS portal</p></div></aside>
+  <div class="nv-shell flex flex-col min-h-screen transition-[padding] duration-calm ease-calm md:pl-sidebar">
+    <header class="sticky top-0 z-30 flex h-16 items-center gap-3 border-b border-border bg-[color-mix(in_srgb,var(--surface)_90%,transparent)] backdrop-blur-sm px-6 md:px-9"><button type="button" class="flex h-9 w-9 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-secondary transition duration-calm ease-calm hover:border-sage-300 hover:text-ink" id="nv-sidebar-toggle" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button><button type="button" class="flex w-full max-w-[380px] items-center gap-2.5 rounded-full border border-border bg-background px-4 py-2.5 text-body text-muted shadow-sm transition duration-calm ease-calm hover:border-sage-300 hover:shadow-md" id="nv-search-trigger" aria-label="Search notes (Ctrl+K)"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search shrink-0" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><span class="flex-1 text-left">Search notes…</span><kbd class="hidden rounded-tiny border border-border bg-surface px-1.5 py-0.5 text-micro sm:inline">⌘K</kbd></button><div class="ml-auto flex items-center gap-2"><button type="button" id="nv-theme-toggle" aria-label="Switch to dark theme" title="Dark theme" class="flex h-9 w-9 items-center justify-center rounded-button border border-border bg-surface text-secondary transition duration-calm ease-calm hover:border-sage-300 hover:text-ink"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg></button></div></header>
+    <main class="flex-1 px-5 py-7 md:px-12 md:py-11 max-w-shell w-full mx-auto">
+      
+    <div class="space-y-7">
+      <header class="space-y-3">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-meta text-muted">
+          <a href="../../subjects/index.html" class="hover:text-sage-700">Subjects</a>
+          <span>›</span>
+          <span class="text-ink font-medium">IT10007</span>
+        </nav>
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center rounded-full bg-primary-soft px-2.5 py-0.5 text-micro font-semibold text-primary-strong">IT10007</span>
+              <span class="text-micro text-muted">Semester 1 · L2·T1·P2 | 5 Credits</span>
+            </div>
+            <h1 class="mt-2 text-page font-heading tracking-[-0.01em] text-ink">Fundamentals of IT &amp; Artificial Intelligence</h1>
+            <p class="mt-1 text-body text-secondary">46 study resources available</p>
+          </div>
+          <input id="nv-subj-detail-search" type="search" placeholder="Filter in IT10007…" class="h-10 rounded-input border border-border bg-surface px-3.5 text-body text-ink placeholder:text-muted focus:outline-none focus:border-sage-400"/>
+        </div>
+        <div id="nv-type-pills" class="flex flex-wrap gap-2 pt-1"><button type="button" data-type="all" class="nv-filter-pill active rounded-full border border-sage-300 bg-primary-soft px-3 py-1 text-micro font-semibold text-primary-strong">All (46)</button><button type="button" data-type="ASSIGNMENT" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Assignment (10)</button><button type="button" data-type="CHEAT_SHEET" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Cheat Sheet (1)</button><button type="button" data-type="HANDWRITTEN_NOTES" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Handwritten Notes (1)</button><button type="button" data-type="NOTES" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Notes (19)</button><button type="button" data-type="PYQ" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">PYQ (7)</button><button type="button" data-type="QUESTION_BANK" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Question Bank (5)</button><button type="button" data-type="SLIDES" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Slides (1)</button><button type="button" data-type="SYLLABUS" class="nv-filter-pill rounded-full border border-border bg-surface px-3 py-1 text-micro font-semibold text-secondary hover:border-sage-300">Syllabus (2)</button></div>
+      </header>
+      <div class="overflow-hidden rounded-md border border-border bg-surface shadow-sm">
+        <ul id="nv-subj-resource-list" class="divide-y divide-border-soft">
+          
+        <li class="nv-resource-row" data-type="SYLLABUS" data-search="fundamentals of it &amp; artificial intelligence — syllabus (it10007 syllabus) it10007_syllabus.pdf syllabus">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdpmb001zy3kv2sdzulyv/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT &amp; Artificial Intelligence — Syllabus (IT10007 Syllabus)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">IT10007_Syllabus.pdf · 92.5 KB · 2182 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Syllabus</span>
+            <a data-asset-href="programming/IT10007_Syllabus.pdf" href="https://drive.google.com/file/d/1nvabBjZfdN7mpBlLpOIBfXPxLL2Ns646/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdpmb001zy3kv2sdzulyv" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="fundamentals of it &amp; artificial intelligence — assignment (it10007 c structure assignment) it10007_c_structure_assignment.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdpfo001vy3kvmkw5pwmo/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT &amp; Artificial Intelligence — Assignment (IT10007 C Structure Assignment)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">IT10007_C_Structure_Assignment.pdf · 237.5 KB · 1921 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/IT10007_C_Structure_Assignment.pdf" href="https://drive.google.com/file/d/1yJEG8zcZ1ddptwp4i-CuR2skiIoJ9pBn/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdpfo001vy3kvmkw5pwmo" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="fundamentals of it &amp; artificial intelligence — assignment (it10007 c string assignment) it10007_c_string_assignment.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdpc8001ty3kvm2g66112/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT &amp; Artificial Intelligence — Assignment (IT10007 C String Assignment)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">IT10007_C_String_Assignment.pdf · 114.4 KB · 1780 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/IT10007_C_String_Assignment.pdf" href="https://drive.google.com/file/d/1_E1PyfqFICnyAsrMbmuAaLC4OhQ5RqJw/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdpc8001ty3kvm2g66112" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="fundamentals of it &amp; artificial intelligence — assignment (it10007 c recursion assignment) it10007_c_recursion_assignment.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdp8w001ry3kvdisbd1wy/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT &amp; Artificial Intelligence — Assignment (IT10007 C Recursion Assignment)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">IT10007_C_Recursion_Assignment.pdf · 79.9 KB · 1539 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/IT10007_C_Recursion_Assignment.pdf" href="https://drive.google.com/file/d/13ANPq6sC0Zd98fEfDm9WOMcfDa1sOYGP/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdp8w001ry3kvdisbd1wy" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="fundamentals of it &amp; artificial intelligence — assignment (it10007 c array assignment) it10007_c_array_assignment.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5wdp5k001py3kvyql5j5n5/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT &amp; Artificial Intelligence — Assignment (IT10007 C Array Assignment)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">IT10007_C_Array_Assignment.pdf · 128.0 KB · 1021 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/IT10007_C_Array_Assignment.pdf" href="https://drive.google.com/file/d/13NHDlyyv2vu0gUXvAsrvEdER65kPbr08/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5wdp5k001py3kvyql5j5n5" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of it &amp; artificial intelligence — previous year paper (it10007mst2syllabus) it10007mst2syllabus.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk7f9004715htvkaqb8kn/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT &amp; Artificial Intelligence — Previous Year Paper (IT10007mst2syllabus)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">IT10007mst2syllabus.pdf · 375.3 KB · 893 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="programming/IT10007mst2syllabus.pdf" href="https://drive.google.com/file/d/1w_ym5Bhz2m3lTuy4p3bnOEYerF5qM1eD/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk7f9004715htvkaqb8kn" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of it — mst 1 question paper it-mst1.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxkrq008v9dui57w7dy5r/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT — MST 1 Question Paper</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it-mst1.pdf · 217.7 KB · 636 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="programming/it-mst1.pdf" href="https://drive.google.com/file/d/1n65CR_cuPdUgJCiX9GWhcpahcAC4EXH0/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxkrq008v9dui57w7dy5r" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of it — mst 1 question paper programming-mst1.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxohn009l9duifuqxjv4h/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT — MST 1 Question Paper</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">programming-mst1.pdf · 13.2 MB · 632 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="programming/programming-mst1.pdf" href="https://drive.google.com/file/d/1moqmzAW35L42jAmwtb6Ia5dt4wVmBOpE/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxohn009l9duifuqxjv4h" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="operating systems — overview notes overview-of-operating-system.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxo0b009h9duirst2dwt6/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Operating Systems — Overview Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">overview-of-operating-system.pdf · 321.2 KB · 617 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/overview-of-operating-system.pdf" href="https://drive.google.com/file/d/1K8zE34JZIr4Vys9VjXG19cSTHheCCDml/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxo0b009h9duirst2dwt6" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="it mid-semester test 1 solutions it-mst1-solutions.docx pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxkgd008t9dui18cupp8n/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">IT Mid-Semester Test 1 Solutions</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it-mst1-solutions.docx · 710.7 KB · 586 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="programming/it-mst1-solutions.docx" href="https://drive.google.com/file/d/1aWi1ZMvrGvrPnLKYguaRsj5jR2pYs8P-/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxkgd008t9dui18cupp8n" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="computer hardware &amp; software — introductory notes intro-to-hardware-and-software.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxji7008n9duitrw0yxl0/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Computer Hardware &amp; Software — Introductory Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">intro-to-hardware-and-software.pdf · 387.2 KB · 546 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/intro-to-hardware-and-software.pdf" href="https://drive.google.com/file/d/16lm-4rn5fHWPpc7SEdPHAaPkjjwxfICn/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxji7008n9duitrw0yxl0" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="computer networks — introductory notes intro-to-computer-networks.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxj3z008l9duijjkh26cs/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Computer Networks — Introductory Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">intro-to-computer-networks.pdf · 253.7 KB · 528 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/intro-to-computer-networks.pdf" href="https://drive.google.com/file/d/1c6px0t5S0fnBpWMULiynw_5aeZKqKLP5/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxj3z008l9duijjkh26cs" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of it — end-semester pyqs (2019–2024) it-endsem-2019-2024.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxjtk008p9duixv6wy1t5/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT — End-Semester PYQs (2019–2024)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it-endsem-2019-2024.pdf · 17.5 MB · 515 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="programming/it-endsem-2019-2024.pdf" href="https://drive.google.com/file/d/1r89aqgj-NKZPaCtrnCwPpxae3g26uMwc/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxjtk008p9duixv6wy1t5" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="basic concepts of it — unit 1 notes unit1-basic-concepts-of-it.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxoss009n9duiw2hq96ck/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Basic Concepts of IT — Unit 1 Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">unit1-basic-concepts-of-it.pdf · 413.4 KB · 514 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/unit1-basic-concepts-of-it.pdf" href="https://drive.google.com/file/d/1EkjjGDClCedDSZSzUQTDbyynnOSl9u-R/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxoss009n9duiw2hq96ck" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="number systems — notes number-system-notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxnoy009f9dui0f8bri22/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Number Systems — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">number-system-notes.pdf · 11.1 MB · 513 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/number-system-notes.pdf" href="https://drive.google.com/file/d/1DFu2qAX4lKQ291V7PBGPA65ej6xg6hJ8/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxnoy009f9dui0f8bri22" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="fundamentals of it &amp; artificial intelligence — notes (functions lab) functions_lab.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk7bt004515htyysv3ks7/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT &amp; Artificial Intelligence — Notes (Functions Lab)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">functions_lab.pdf · 55.1 KB · 492 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/functions_lab.pdf" href="https://drive.google.com/file/d/1d4t4xCcaETYyjNhgvFQ1GoHljz-yJqxV/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk7bt004515htyysv3ks7" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="CHEAT_SHEET" data-search="it10007 cheat sheet it10007-cheat-sheet.pdf cheat sheet">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxlyd00939duibcu7sulm/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">It10007 Cheat Sheet</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it10007-cheat-sheet.pdf · 2.3 MB · 479 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Cheat Sheet</span>
+            <a data-asset-href="programming/it10007-cheat-sheet.pdf" href="https://drive.google.com/file/d/13xDHhOu6Drk_SAzpae6Pztdn3qud_RgP/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxlyd00939duibcu7sulm" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of it — mst 2 question paper it-mst2.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxl33008x9duiaaqjxz9k/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT — MST 2 Question Paper</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it-mst2.pdf · 350.3 KB · 477 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="programming/it-mst2.pdf" href="https://drive.google.com/file/d/1sMVichMjY5HQ5yZ0-LV-QNf-PwN17Db-/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxl33008x9duiaaqjxz9k" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="HANDWRITTEN_NOTES" data-search="fundamentals of it &amp; artificial intelligence — handwritten notes (c handwritten notes by lucky) c - handwritten notes by lucky.pdf handwritten notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5tk784004315htf305q2jq/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT &amp; Artificial Intelligence — Handwritten Notes (C Handwritten Notes By LUCKY)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">C - Handwritten notes by LUCKY.pdf · 16.3 MB · 469 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Handwritten Notes</span>
+            <a data-asset-href="programming/C - Handwritten notes by LUCKY.pdf" href="https://drive.google.com/file/d/1mEEd6ov803fjRDoJ6_yAGmeHfumP-WTs/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5tk784004315htf305q2jq" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="PYQ" data-search="fundamentals of it — end-semester paper (2025) it-endsem-2025.pdf pyq">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxk4y008r9dui2tneu4mi/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Fundamentals of IT — End-Semester Paper (2025)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it-endsem-2025.pdf · 618.5 KB · 457 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">PYQ</span>
+            <a data-asset-href="programming/it-endsem-2025.pdf" href="https://drive.google.com/file/d/1e2NOva0JYh3xAm-WrUXc5VezezFt6MAM/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxk4y008r9dui2tneu4mi" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="instructions &amp; operators — chapter 2 notes chapter-2-instructions-and-operators.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxe1y007n9dui9cn5nebo/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Instructions &amp; Operators — Chapter 2 Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">chapter-2-instructions-and-operators.pdf · 1.8 MB · 453 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/chapter-2-instructions-and-operators.pdf" href="https://drive.google.com/file/d/1bSF8GsI-irPgnVbP7j_xsi_X-2zuLN4l/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxe1y007n9dui9cn5nebo" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="dbms — notes (set 2) dbms-notes-2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxgqn00859duixy4e0144/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">DBMS — Notes (Set 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">dbms-notes-2.pdf · 1.1 MB · 416 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/dbms-notes-2.pdf" href="https://drive.google.com/file/d/1XETsojopKVyLAuhn2zdM8hAwuhJrgjGU/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxgqn00859duixy4e0144" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="conditional instructions — chapter 3 notes chapter-3-conditional-instructions.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxeoo007r9duirof7i6v6/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Conditional Instructions — Chapter 3 Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">chapter-3-conditional-instructions.pdf · 2.1 MB · 392 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/chapter-3-conditional-instructions.pdf" href="https://drive.google.com/file/d/1hZsLn-q9aYlFsBJQl7polfsCrrVEZg35/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxeoo007r9duirof7i6v6" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="flowcharts &amp; algorithms — notes flowcharts-and-algorithms.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxhj200899duit70qzdiv/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Flowcharts &amp; Algorithms — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">flowcharts-and-algorithms.pdf · 735.0 KB · 391 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/flowcharts-and-algorithms.pdf" href="https://drive.google.com/file/d/1j2IozOwb5Aso3cPNgIDNnaJLYin2SwqK/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxhj200899duit70qzdiv" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="functions &amp; recursion — notes functions-and-recursion.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxhxb008b9duirdc3kdyn/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Functions &amp; Recursion — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">functions-and-recursion.pdf · 1020.9 KB · 371 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/functions-and-recursion.pdf" href="https://drive.google.com/file/d/12NrxxLVtGr4IkElErkKN853ctg1OxJIu/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxhxb008b9duirdc3kdyn" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="computer programming: theory &amp; practicals — textbook c-language-book-sema.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxdf6007j9dui6a56r50c/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Computer Programming: Theory &amp; Practicals — Textbook</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">c-language-book-semA.pdf · 13.5 MB · 368 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/c-language-book-semA.pdf" href="https://drive.google.com/file/d/1xevaEcARrdUJujQGNmLNenJUnmRTvZTB/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxdf6007j9dui6a56r50c" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="arrays &amp; strings — notes arrays-and-strings.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxcoo007d9duiszc6oq8e/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Arrays &amp; Strings — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">arrays-and-strings.pdf · 1015.7 KB · 363 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/arrays-and-strings.pdf" href="https://drive.google.com/file/d/1kG3c-1ois1tAbnjoC_g1mt-xfLjcYPlr/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxcoo007d9duiszc6oq8e" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="dbms — notes (set 1) dbms-notes-1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxgfa00839dui03tyil22/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">DBMS — Notes (Set 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">dbms-notes-1.pdf · 138.5 KB · 357 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/dbms-notes-1.pdf" href="https://drive.google.com/file/d/14UMJT3VzxC8-dZvdU64n7CYHllPVRrtK/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxgfa00839dui03tyil22" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="SYLLABUS" data-search="computer organization &amp; architecture — syllabus computer-organization-syllabus.pdf syllabus">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxfmt007x9duigfkijtdl/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Computer Organization &amp; Architecture — Syllabus</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">computer-organization-syllabus.pdf · 77.2 KB · 356 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Syllabus</span>
+            <a data-asset-href="programming/computer-organization-syllabus.pdf" href="https://drive.google.com/file/d/1MCguJ8ODpap_ZmzleLyjpQRpB-8t4alf/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxfmt007x9duigfkijtdl" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="c programming — basics notes basics-of-c-language-sema.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxd3s007h9duin2i08uoi/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">C Programming — Basics Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">basics-of-c-language-semA.pdf · 188.8 KB · 350 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/basics-of-c-language-semA.pdf" href="https://drive.google.com/file/d/1zbbBKsx-T6xaL6nh_gNbRUvPcQHMxcr2/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxd3s007h9duin2i08uoi" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="QUESTION_BANK" data-search="c language question bank 1 c-language-question-bank-1.docx question bank">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxdqk007l9dui4eltditn/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">C Language Question Bank 1</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">c-language-question-bank-1.docx · 14.8 KB · 346 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Question Bank</span>
+            <a data-asset-href="programming/c-language-question-bank-1.docx" href="https://drive.google.com/file/d/1PsZI5bUxbpr38NSRmEXLPuHf1kHooc-9/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxdqk007l9dui4eltditn" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="pointers in c — notes (part 1) pointers-in-c-part1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxo8v009j9duiuq033c0e/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Pointers in C — Notes (Part 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">pointers-in-c-part1.pdf · 1.1 MB · 342 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/pointers-in-c-part1.pdf" href="https://drive.google.com/file/d/1sFlLEFbXi09wQt2crRVPnpKVkgnmkALY/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxo8v009j9duiuq033c0e" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="SLIDES" data-search="boolean algebra — chapter 3 slides chapter-3-boolean-algebra.pptx slides">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxedb007p9duiijdee9k7/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PPTX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Boolean Algebra — Chapter 3 Slides</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">chapter-3-boolean-algebra.pptx · 763.2 KB · 322 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Slides</span>
+            <a data-asset-href="programming/chapter-3-boolean-algebra.pptx" href="https://drive.google.com/file/d/1JRWU-6KE1VMIJ7NXClhzsFVg3NrtwuVh/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxedb007p9duiijdee9k7" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="QUESTION_BANK" data-search="dbms question bank dbms-question-bank.docx question bank">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxh2000879duik6mqz1xf/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">DBMS Question Bank</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">dbms-question-bank.docx · 11.8 KB · 316 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Question Bank</span>
+            <a data-asset-href="programming/dbms-question-bank.docx" href="https://drive.google.com/file/d/1PjAmxGamdK2Xfyvm2Uqi9GTj4LJHMviM/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxh2000879duik6mqz1xf" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="programming lab — assignment 1 lab-assignment-1.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxndk009d9duivz7nitax/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Programming Lab — Assignment 1</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lab-assignment-1.pdf · 48.7 KB · 297 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/lab-assignment-1.pdf" href="https://drive.google.com/file/d/1kT0SS3m9qIsVWUkSzzfxBdh3L3ASuE1i/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxndk009d9duivz7nitax" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="introduction to ai — notes (set 2) intro-to-ai-notes-2.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oximy008h9duir3h0eydn/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Introduction to AI — Notes (Set 2)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">intro-to-ai-notes-2.pdf · 1.2 MB · 296 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/intro-to-ai-notes-2.pdf" href="https://drive.google.com/file/d/1AWVnEAftWKqSSEO16ZLnb04a3PqR10DZ/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oximy008h9duir3h0eydn" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="QUESTION_BANK" data-search="it10007 question bank overview of information technology it10007-question-bank-overview-of-information-technology.docx question bank">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxmib00979duie978lqfk/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">It10007 Question Bank Overview Of Information Technology</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it10007-question-bank-overview-of-information-technology.docx · 10.1 KB · 285 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Question Bank</span>
+            <a data-asset-href="programming/it10007-question-bank-overview-of-information-technology.docx" href="https://drive.google.com/file/d/13Vh15ZP2UyGARwvCC-vnrA7DRwvBoRPT/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxmib00979duie978lqfk" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="programming lab — assignment 0 lab-assignment-0.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxn29009b9duismc62ptr/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Programming Lab — Assignment 0</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">lab-assignment-0.pdf · 47.8 KB · 282 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/lab-assignment-0.pdf" href="https://drive.google.com/file/d/1ZlqiSLKJKTZsP77V5nd_VknB7C4LFcVH/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxn29009b9duismc62ptr" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="QUESTION_BANK" data-search="it10007 question bank 2 it10007-question-bank-2.docx question bank">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxm6w00959duijgl7xoyp/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">It10007 Question Bank 2</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it10007-question-bank-2.docx · 11.3 KB · 278 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Question Bank</span>
+            <a data-asset-href="programming/it10007-question-bank-2.docx" href="https://drive.google.com/file/d/1HLWkyUhOn9QVq8uMPfc3tuVeTRV92G8H/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxm6w00959duijgl7xoyp" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="introduction to ai — notes (set 1) intro-to-ai-notes-1.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxibj008f9dui3bh63ga8/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Introduction to AI — Notes (Set 1)</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">intro-to-ai-notes-1.pdf · 114.6 KB · 271 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/intro-to-ai-notes-1.pdf" href="https://drive.google.com/file/d/1gkdhj9wVnC9P4gN0BUoy4J-HuB1YAk7_/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxibj008f9dui3bh63ga8" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="QUESTION_BANK" data-search="it10007 question bank it10007-question-bank.docx question bank">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxmsr00999duiiaka37zj/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">DOCX</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">It10007 Question Bank</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it10007-question-bank.docx · 15.1 KB · 228 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Question Bank</span>
+            <a data-asset-href="programming/it10007-question-bank.docx" href="https://drive.google.com/file/d/1Ww6-n4NCBQEmB-8-TnE-6_IVEizAiB2j/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxmsr00999duiiaka37zj" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="NOTES" data-search="computer programming — notes cp-notes.pdf notes">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxfy7007z9dui9f4nw51h/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Computer Programming — Notes</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">cp-notes.pdf · 13.4 MB · 222 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Notes</span>
+            <a data-asset-href="programming/cp-notes.pdf" href="https://drive.google.com/file/d/1wMQOc4Qz0t4wR078tbBxUxczDR7A9iYV/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxfy7007z9dui9f4nw51h" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="computer programming lab — assignment 3 co10504-lab-assignment-3.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxf02007t9duisj2evotn/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Computer Programming Lab — Assignment 3</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">co10504-lab-assignment-3.pdf · 60.4 KB · 208 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/co10504-lab-assignment-3.pdf" href="https://drive.google.com/file/d/11sToAYpfoBKORcsrS_n827rgabPIY6jS/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxf02007t9duisj2evotn" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="computer programming lab — assignment 4 co10504-lab-assignment-4.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxfbg007v9dui334cc29y/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">Computer Programming Lab — Assignment 4</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">co10504-lab-assignment-4.pdf · 56.7 KB · 200 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/co10504-lab-assignment-4.pdf" href="https://drive.google.com/file/d/1ZoPyx0jcpA5UNbiU1jDbPDnpUVqoq2s7/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxfbg007v9dui334cc29y" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="it10007 assignment it10007-assignment.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxloq00919dui7facv2nf/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">It10007 Assignment</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it10007-assignment.pdf · 54.3 KB · 177 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/it10007-assignment.pdf" href="https://drive.google.com/file/d/1WgXWHis3Xun2w-3TrelhWzqDtapqHKgP/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxloq00919dui7facv2nf" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        <li class="nv-resource-row" data-type="ASSIGNMENT" data-search="it10007 assignment 2 it10007-assignment-2.pdf assignment">
+          <div class="flex min-h-[64px] items-center gap-3.5 px-4 py-3 transition duration-calm ease-calm hover:bg-row-hover">
+            <a href="../../notes/cmu5oxleh008z9dui2gsbefas/index.html" class="flex min-w-0 flex-1 items-center gap-3.5">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-input bg-primary-soft text-primary-strong text-micro font-bold">PDF</span>
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-body-lg font-semibold text-ink">It10007 Assignment 2</span>
+                <span class="mt-0.5 block truncate text-micro text-muted">it10007-assignment-2.pdf · 42.3 KB · 126 views</span>
+              </span>
+            </a>
+            <span class="hidden sm:inline-flex items-center rounded-full bg-surface-soft px-2.5 py-1 text-micro font-semibold text-secondary whitespace-nowrap">Assignment</span>
+            <a data-asset-href="programming/it10007-assignment-2.pdf" href="https://drive.google.com/file/d/1LFWWAHBqyuRCgenAUGl76qaJ5aewaZx8/view" class="rounded-button border border-border bg-surface px-2.5 py-1.5 text-micro font-semibold text-ink hover:border-sage-300 whitespace-nowrap">Open</a>
+            <button type="button" class="nv-bookmark-btn flex h-8 w-8 shrink-0 items-center justify-center rounded-button border border-border bg-surface text-muted hover:text-primary-strong" data-resource-id="cmu5oxleh008z9dui2gsbefas" aria-label="Bookmark">☆</button>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+    
+    </main>
+  </div>
+  <nav aria-label="Bottom navigation" class="fixed bottom-0 left-0 right-0 z-40 flex h-bottomnav items-center justify-around border-t border-border bg-surface md:hidden"><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-sage-700 font-semibold" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Home</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../subjects/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Subjects</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../notes/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Notes</a><a class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted" href="../../bookmarks/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg>Saved</a><button type="button" id="nv-mobile-more" aria-label="More" aria-expanded="false" class="flex flex-col items-center gap-1 px-4 py-1 text-micro transition duration-calm ease-calm text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>More</button></nav>
+  <div id="nv-mobile-drawer" class="fixed inset-0 z-[80] md:hidden pointer-events-none" aria-hidden="true"><div class="absolute inset-0 bg-[color-mix(in_srgb,var(--sage-800)_45%,transparent)] backdrop-blur-sm transition-opacity duration-300 opacity-0"></div><div role="dialog" aria-label="Navigation menu" class="absolute inset-y-0 left-0 flex w-[82%] max-w-[300px] flex-col bg-surface shadow-lg transition-transform duration-300 ease-out -translate-x-full"><div class="flex items-center justify-between px-5 py-5"><a class="flex items-center gap-3" href="../../index.html"><img src="../../sgsits-logo.webp" alt="SGSITS crest" class="h-9 w-9 shrink-0 rounded-full object-cover shadow-sm"/><span class="leading-tight"><span class="block text-micro font-semibold uppercase tracking-[0.16em] text-text-faint">SGSITS</span><span class="block text-[15px] font-heading text-ink">NotesVault</span></span></a><button id="nv-drawer-close" aria-label="Close menu" class="flex h-8 w-8 items-center justify-center rounded-button text-secondary hover:bg-surface-soft hover:text-ink"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button></div><nav class="flex-1 overflow-y-auto px-3 pb-4"><div class="space-y-0.5"><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm bg-primary-soft font-semibold text-primary-strong" href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard shrink-0" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>Dashboard</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../subjects/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open shrink-0" aria-hidden="true"><path d="M12 5v16"></path><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"></path></svg>Subjects</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../notes/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text shrink-0" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Notes</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../bookmarks/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark shrink-0" aria-hidden="true"><path d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"></path></svg>Saved</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../pyq/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scroll-text shrink-0" aria-hidden="true"><path d="M15 12h-5"></path><path d="M15 8h-5"></path><path d="M19 17V5a2 2 0 0 0-2-2H4"></path><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path></svg>PYQ Papers</a></div><div class="my-3 border-t border-border-soft"></div><div class="space-y-0.5"><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../schedule/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days shrink-0" aria-hidden="true"><path d="M8 2v3"></path><path d="M16 2v3"></path><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M8 13h.01"></path><path d="M12 13h.01"></path><path d="M16 13h.01"></path><path d="M8 17h.01"></path><path d="M12 17h.01"></path><path d="M16 17h.01"></path></svg>Schedule</a><a class="flex h-12 items-center gap-3 rounded-button px-3 text-body-lg transition duration-calm ease-calm text-secondary hover:bg-surface-soft" href="../../about/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>About</a></div></nav></div></div>
+  <!-- Global Ctrl+K Search Modal -->
+  <div id="nv-search-modal" class="nv-modal-backdrop" role="dialog" aria-modal="true" aria-label="Search notes and subjects">
+    <div class="w-full max-w-xl overflow-hidden rounded-panel border border-border bg-surface shadow-lg">
+      <div class="flex items-center gap-2.5 border-b border-border px-4 py-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-muted"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+        <input id="nv-search-input" type="text" placeholder="Search notes, PYQs, slides, or subjects…" class="w-full bg-transparent text-body-lg text-ink placeholder:text-muted focus:outline-none"/>
+        <button id="nv-search-close" type="button" class="rounded-tiny border border-border px-2 py-0.5 text-micro text-muted hover:text-ink">Esc</button>
+      </div>
+      <div id="nv-search-results" class="max-h-[60vh] overflow-y-auto divide-y divide-border-soft p-2"></div>
+    </div>
+  </div>
+  <script src="../../assets-config.js"></script>
+  <script src="../../data/site-data.js"></script>
+  <script src="../../static-app.js"></script>
+  
+</body>
+</html>
